@@ -1,4 +1,4 @@
-# Semantic Search Project
+# Epiverse search backend
 
 This project implements a semantic search system using embeddings. It consists of two main parts: data acquisition and embedding generation, and a FastAPI endpoint for querying.
 
