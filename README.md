@@ -21,5 +21,5 @@ After scraping, the data is processed to generate embeddings.  This involves the
 ## 2. FastAPI Endpoint for Search
 This part of the project provides a FastAPI endpoint that handles search queries and returns the most relevant results.
 
-![Flowchart](/`epiverse search.drawio.png`) 
+![Flowchart](./epiverse_search_flowchart.png) 
 
