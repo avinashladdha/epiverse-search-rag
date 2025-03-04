@@ -3,7 +3,7 @@ from pathlib import Path
 from transformers import AutoTokenizer, AutoModel
 import torch
 import shutil
-import pandas as pd 
+import pandas as pd
 import time
 from nltk import sent_tokenize
 from sentence_transformers import SentenceTransformer, CrossEncoder, util
@@ -12,32 +12,8 @@ import string
 import numpy as np
 import pickle
 
-# Functions 
+# Functions
 
-
-def rename_rmd_to_md(folder_path):
-    # Use Path from pathlib to manage paths
-    folder = Path(folder_path)
-    # Create a dictionary to store subfolder names and file contents
-    file_data = {}
-    # Get all .md files from subfolders recursively
-    rmd_files = [str(f) for f in folder.glob('**/*.Rmd')]
-
-    #print(rmd_files)
-    for rmd_file in rmd_files:
-        print(rmd_file)
-        # Create the new filename by replacing .Rmd with .md
-        md_file = rmd_file.replace('.Rmd', '.md')
-
-        # Check if the .md file already exists
-        if not os.path.exists(md_file):
-            # Copy the .Rmd file to .md
-            shutil.copy(rmd_file, md_file)
-            print(f'Copied {rmd_file} to {md_file}')
-        else:
-            print(f'{md_file} already exists. Skipping.')
-    return
-    
 def read_md_files_from_subfolders(folder_path):
     # Use Path from pathlib to manage paths
     folder = Path(folder_path)
@@ -45,7 +21,7 @@ def read_md_files_from_subfolders(folder_path):
     # Create a dictionary to store subfolder names and file contents
     file_data = {}
     # Get all .md files from subfolders recursively
-    md_files = [i for i in Path(folder_path).glob('**/*.md') if not ('vignettes/man' in str(i) or 'vignettes\\man' in str(i))]
+    md_files = [i for i in Path(folder_path).glob('**/*.R?md') if not ('vignettes/man' in str(i) or 'vignettes\\man' in str(i))]
 
     # Iterate through each file and read content
     for md_file in md_files:
@@ -68,7 +44,6 @@ def read_md_files_from_subfolders(folder_path):
     return file_data
 
 
-rename_rmd_to_md('./sources/')
 file_data = read_md_files_from_subfolders('./sources/')
 
 # Display the results
@@ -108,7 +83,7 @@ analysis_df = temp_df.explode("tokenized_content")
 analysis_df['tokenized_content'] = analysis_df['tokenized_content'].apply(lambda x : str(x)[2:-2])
 analysis_df['cluster_id'] = [i//window_size for i in range(len(analysis_df))]
 
-# Break down the content into smaller chunks 
+# Break down the content into smaller chunks
 # WIndow size is = 7 as this was the median length of documents in the dataset
 paragraphs = analysis_df['tokenized_content'].to_list()
 # Smaller value: Context from other sentences might get lost
@@ -129,7 +104,7 @@ top_k = 32                          #Number of passages we want to retrieve with
 #The bi-encoder will retrieve 32 documents. We use a cross-encoder, to re-rank the results list to improve the quality
 cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
 
-# We encode all passages into our vector space. 
+# We encode all passages into our vector space.
 corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True, show_progress_bar=True)
 
 torch.save(corpus_embeddings,"./app/corpus_embeddings.pth")
