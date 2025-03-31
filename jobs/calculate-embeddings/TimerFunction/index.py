@@ -58,8 +58,14 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
     """
     folder = Path(folder_path)
     file_data = {}
+
+    # Vignettes can be:
+    # - simple markdown files (.md)
+    # - Rmarkdown files (.Rmd)
+    # - quarto files (.qmd)
+    # All these formats are based on markdown and can be parsed as plain text.
     md_files = [
-        f for f in glob.iglob(f"{folder}/**/*.md", recursive=True)
+        f for f in glob.iglob(f"{folder}/**/*.[Rq]?md", recursive=True)
         if "vignettes/man" not in Path(f).as_posix()
     ]
 
