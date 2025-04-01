@@ -1,112 +1,203 @@
 import os
 from pathlib import Path
-from transformers import AutoTokenizer, AutoModel
-import torch
 import shutil
 import pandas as pd
 import time
 from nltk import sent_tokenize
-from sentence_transformers import SentenceTransformer, CrossEncoder, util
-device = torch.device("cpu")
-import string
-import numpy as np
-import pickle
+from sentence_transformers import SentenceTransformer
+import torch
+from tqdm.autonotebook import tqdm  # For progress bars
+#import multiprocessing
 
-# Functions
 
-def read_md_files_from_subfolders(folder_path):
-    # Use Path from pathlib to manage paths
+# --- Configuration ---
+SOURCE_FOLDER = '../data/sources/'
+OUTPUT_EMBEDDINGS_PATH = '../data/corpus_embeddings.pth'
+OUTPUT_ANALYSIS_DF_PATH = '../data/analysis_df.csv'
+BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
+MAX_SEQ_LENGTH = 256
+WINDOW_SIZE = 7
+MIN_SENTENCE_TOKENS = 5
+DEVICE = torch.device("cpu")
+
+
+# --- Utility Functions ---
+def read_md_files_from_subfolders(folder_path: str) -> dict:
+    """Reads .md files from subfolders, excluding those in 'vignettes/man'.
+
+       Args:
+           folder_path: The path to the folder containing .md files.
+
+       Returns:
+           A dictionary where keys are subfolder names and values are lists of
+           (filename, content) tuples.
+    """
     folder = Path(folder_path)
-
-    # Create a dictionary to store subfolder names and file contents
     file_data = {}
-    # Get all .md files from subfolders recursively
-    md_files = [i for i in Path(folder_path).glob('**/*.R?md') if not ('vignettes/man' in str(i) or 'vignettes\\man' in str(i))]
+    md_files = [
+        f for f in folder.glob('**/*.R?md')
+        if not ('vignettes/man' in str(f) or 'vignettes\\man' in str(f))
+    ]
 
-    # Iterate through each file and read content
-    for md_file in md_files:
+    for md_file in tqdm(md_files, desc="Reading .md files"):
         try:
-            # Extract the subfolder name
             subfolder = md_file.parent.name
             folder_name = md_file.parent.parent.name
-            # Open and read the .md file
             with open(md_file, 'r', encoding='utf-8') as file:
                 content = file.read()
 
-                # Store the content under the subfolder key
-                if folder_name not in file_data:
-                    file_data[folder_name] = []
-
-                # Append a tuple (filename, content) to the subfolder entry
-                file_data[folder_name].append((md_file.name, content))
+            if folder_name not in file_data:
+                file_data[folder_name] = []
+            file_data[folder_name].append((md_file.name, content))
         except Exception as e:
             print(f"Could not read {md_file}: {e}")
     return file_data
 
 
-file_data = read_md_files_from_subfolders('./sources/')
 
-# Display the results
-for subfolder, files in file_data.items():
-    print(f"Subfolder: {subfolder}")
-    for file_name, content in files:
-        try:
-            print(f"  File: {file_name}, Content: {content[5]}...")  # Display first 100 characters for brevity
-        except:
-            print("error for - {}".format(file_name))
+def preprocess_content(content: str) -> list[list[str]]:
+    """Cleans and tokenizes content into sentences.
 
-doc_list = []
-for subfolder, files in file_data.items():
-    for file_name, content in files:
-        paragraphs = []
-        for paragraph in content.replace("\r\n", "\n").split("\n\n"):
-            if len(paragraph.strip()) > 0:
-                paragraph = paragraph.replace("\n","").replace("#","")
-                paragraphs.append(sent_tokenize(paragraph.strip()))
-                # Append the dictionary to the list
-        filtered_paragraphs = [lst for lst in paragraphs if len(str(lst).split(' ')) >= 5]
-        temp_dict = {
-        'package_name': subfolder,
-        'file_name': file_name,
-        'content': content,
-        'tokenized_content' : filtered_paragraphs
-        }
-        doc_list.append(temp_dict)
+    Args:
+        content: The text content to preprocess.
+
+    Returns:
+        A list of lists, where each inner list contains sentences (list of string).
+    """
+    cleaned_content = content.replace("\r\n", "\n").replace("\n", "").replace("#", "").replace("*", "")
+    paragraphs = cleaned_content.split("\n\n")
+    sentences = []
+    for paragraph in paragraphs:
+        if paragraph.strip():
+            sents = sent_tokenize(paragraph.strip())
+            filtered_sents = [sent for sent in sents if len(sent.split()) >= MIN_SENTENCE_TOKENS]
+            if filtered_sents:
+                sentences.append(filtered_sents)
+    return sentences
 
 
 
-temp_df = pd.DataFrame(doc_list)
-temp_df['cc'] = temp_df['tokenized_content'].apply(lambda x :len(x))
-temp_df['content_cleaned'] = temp_df['content'].apply(lambda x : x.replace('\n','').replace("#","").replace("*",""))
+def create_document_list(file_data: dict) -> list[dict]:
+    """Creates a list of dictionaries, each representing a document
+    with metadata and tokenized content.
 
-analysis_df = temp_df.explode("tokenized_content")
-analysis_df['tokenized_content'] = analysis_df['tokenized_content'].apply(lambda x : str(x)[2:-2])
-analysis_df['cluster_id'] = [i//window_size for i in range(len(analysis_df))]
+    Args:
+        file_data: A dictionary containing file data, as returned by
+        read_md_files_from_subfolders.
 
-# Break down the content into smaller chunks
-# WIndow size is = 7 as this was the median length of documents in the dataset
-paragraphs = analysis_df['tokenized_content'].to_list()
-# Smaller value: Context from other sentences might get lost
-# Lager values: More context from the paragraph remains, but results are longer
-window_size = 7
-passages= []
+    Returns:
+        A list of dictionaries, where each dictionary has keys
+        'package_name', 'file_name', 'content', and 'tokenized_content'.
+    """
+    doc_list = []
+    for subfolder, files in file_data.items():
+        for file_name, content in files:
+            tokenized_content = preprocess_content(content)
+            if tokenized_content:
+                temp_dict = {
+                    'package_name': subfolder,
+                    'file_name': file_name,
+                    'content': content,
+                    'tokenized_content': tokenized_content
+                }
+                doc_list.append(temp_dict)
+    return doc_list
 
-for start_idx in range(0, len(paragraphs), window_size):
-    end_idx = min(start_idx + window_size, len(paragraphs))
-    passages.append(";".join(paragraphs[start_idx:end_idx]))
 
 
-#We use the Bi-Encoder to encode all passages, so that we can use it with semantic search
-bi_encoder = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
-bi_encoder.max_seq_length = 256    #Truncate long passages to 256 tokens
-top_k = 32                          #Number of passages we want to retrieve with the bi-encoder
+def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.DataFrame:
+    """Creates and preprocesses the analysis DataFrame.
 
-#The bi-encoder will retrieve 32 documents. We use a cross-encoder, to re-rank the results list to improve the quality
-cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+    Args:
+        doc_list: A list of document dictionaries.
+        window_size: The window size for grouping sentences.
 
-# We encode all passages into our vector space.
-corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True, show_progress_bar=True)
+    Returns:
+        A Pandas DataFrame with columns 'package_name', 'file_name',
+        'content', 'tokenized_content', 'sentence_count', 'content_cleaned',
+        and 'cluster_id'.
+    """
+    analysis_df = pd.DataFrame(doc_list)
+    analysis_df['sentence_count'] = analysis_df['tokenized_content'].apply(len)
+    analysis_df['content_cleaned'] = analysis_df['content'].apply(lambda x: x.replace('\n', '').replace("#", "").replace("*", ""))
+    analysis_df_exploded = analysis_df.explode("tokenized_content")
+    analysis_df_exploded['tokenized_content'] = analysis_df_exploded['tokenized_content'].apply(lambda x: str(x))
+    analysis_df_exploded['cluster_id'] = [i // window_size for i in range(len(analysis_df_exploded))]
+    return analysis_df_exploded
 
-torch.save(corpus_embeddings,"./app/corpus_embeddings.pth")
-print("Embeddings saved to 'embeddings.pth'.")
-analysis_df.to_csv('./app/analysis_df.csv', index = False)
+
+
+def create_passages(analysis_df: pd.DataFrame, window_size: int) -> list[str]:
+    """Creates passages by joining tokenized content within a sliding window.
+
+    Args:
+        analysis_df: The analysis DataFrame.
+        window_size: The number of sentences to combine into a passage.
+
+    Returns:
+        A list of strings, where each string is a passage.
+    """
+    paragraphs = analysis_df['tokenized_content'].tolist()
+    passages = []
+    for i in range(0, len(paragraphs), window_size):
+        window = paragraphs[i:i + window_size]
+        passages.append("; ".join(window))
+    return passages
+
+
+
+def encode_and_save_embeddings(passages: list[str], output_path: str,
+                              model_name: str, max_length: int,
+                              device: torch.device) -> None:
+    """Encodes passages using a SentenceTransformer and saves the embeddings.
+
+    Args:
+        passages: A list of text passages.
+        output_path: The path to save the embeddings.
+        model_name: The name of the SentenceTransformer model.
+        max_length: The maximum sequence length for the model.
+        device: The torch device to use (e.g., 'cpu' or 'cuda').
+    """
+    bi_encoder = SentenceTransformer(model_name)
+    bi_encoder.max_seq_length = max_length
+    corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True,
+                                          show_progress_bar=True, device=device)
+    torch.save(corpus_embeddings, output_path)
+
+    print(f"Embeddings saved to '{output_path}'.")
+
+
+
+# --- Main Execution ---
+if __name__ == "__main__":
+    start_time = time.time()
+    #multiprocessing.set_start_method("spawn", force=True)
+
+    print("\n--- Reading .md files ---")
+    file_data = read_md_files_from_subfolders(SOURCE_FOLDER)
+
+    # Optional: Display a sample of the read data
+    # for subfolder, files in list(file_data.items())[:1]:
+    #     print(f"\nSubfolder: {subfolder}")
+    #     for file_name, content in files[:1]:
+    #         print(f"  File: {file_name}, Content (first 100 chars): {content[:100]}...")
+
+    print("\n--- Creating Document List and Tokenizing Content ---")
+    doc_list = create_document_list(file_data)
+
+    print("\n--- Creating Analysis DataFrame ---")
+    analysis_df = create_analysis_dataframe(doc_list, WINDOW_SIZE)
+
+    print("\n--- Creating Passages ---")
+    passages = create_passages(analysis_df, WINDOW_SIZE)
+
+    print("\n--- Encoding and Saving Embeddings ---")
+    encode_and_save_embeddings(passages, OUTPUT_EMBEDDINGS_PATH,
+                              BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
+
+    print("\n--- Saving Analysis DataFrame ---")
+    analysis_df.to_csv(OUTPUT_ANALYSIS_DF_PATH, index=False)
+    print(f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}'.")
+
+    end_time = time.time()
+    print(f"\nTotal processing time: {end_time - start_time:.2f} seconds")
