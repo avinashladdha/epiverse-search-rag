@@ -6,14 +6,40 @@ import time
 from nltk import sent_tokenize
 from sentence_transformers import SentenceTransformer
 import torch
-from tqdm.autonotebook import tqdm  # For progress bars
-#import multiprocessing
+
+import logging
+from logging.handlers import RotatingFileHandler
+
+
+
+# --- Logging Configuration ---
+log_file_path = "calculate_embedding.log"  # Define the log file path
+
+# Create a rotating file handler
+log_handler = RotatingFileHandler(
+    log_file_path, maxBytes=10 * 1024 * 1024, backupCount=5  # 10MB max, 5 backups
+)
+# Create a formatter
+log_formatter = logging.Formatter(
+    "%(asctime)s - %(levelname)s - %(message)s"
+)
+
+# Set the formatter for the handler
+log_handler.setFormatter(log_formatter)
+
+# Get the root logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # Set the logging level for the logger
+
+# Add the handler to the logger
+logger.addHandler(log_handler)
+
 
 
 # --- Configuration ---
-SOURCE_FOLDER = '../data/sources/'
-OUTPUT_EMBEDDINGS_PATH = '../data/corpus_embeddings.pth'
-OUTPUT_ANALYSIS_DF_PATH = '../data/analysis_df.csv'
+SOURCE_FOLDER = './data/sources/'
+OUTPUT_EMBEDDINGS_PATH = './data/corpus_embeddings.pth'
+OUTPUT_ANALYSIS_DF_PATH = './data/analysis_df.csv'
 BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
 MAX_SEQ_LENGTH = 256
 WINDOW_SIZE = 7
@@ -24,12 +50,10 @@ DEVICE = torch.device("cpu")
 # --- Utility Functions ---
 def read_md_files_from_subfolders(folder_path: str) -> dict:
     """Reads .md files from subfolders, excluding those in 'vignettes/man'.
-
        Args:
            folder_path: The path to the folder containing .md files.
-
        Returns:
-           A dictionary where keys are subfolder names and values are lists of
+           A dict where keys are subfolder names and values are lists of
            (filename, content) tuples.
     """
     folder = Path(folder_path)
@@ -38,8 +62,8 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
         f for f in folder.glob('**/*.R?md')
         if not ('vignettes/man' in str(f) or 'vignettes\\man' in str(f))
     ]
-
-    for md_file in tqdm(md_files, desc="Reading .md files"):
+    logger.info(f"Found {len(md_files)} files to process.")
+    for md_file in md_files:
         try:
             subfolder = md_file.parent.name
             folder_name = md_file.parent.parent.name
@@ -50,14 +74,14 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
                 file_data[folder_name] = []
             file_data[folder_name].append((md_file.name, content))
         except Exception as e:
-            print(f"Could not read {md_file}: {e}")
+            logger.error(f"Could not read {md_file}: {e}")
+    logger.info(f"Successfully read data from {len(file_data)} subfolders.")
     return file_data
 
 
 
 def preprocess_content(content: str) -> list[list[str]]:
     """Cleans and tokenizes content into sentences.
-
     Args:
         content: The text content to preprocess.
 
@@ -101,6 +125,8 @@ def create_document_list(file_data: dict) -> list[dict]:
                     'tokenized_content': tokenized_content
                 }
                 doc_list.append(temp_dict)
+    logger.info(
+        f"Created a document list containing {len(doc_list)} documents.")
     return doc_list
 
 
@@ -123,6 +149,10 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
     analysis_df_exploded = analysis_df.explode("tokenized_content")
     analysis_df_exploded['tokenized_content'] = analysis_df_exploded['tokenized_content'].apply(lambda x: str(x))
     analysis_df_exploded['cluster_id'] = [i // window_size for i in range(len(analysis_df_exploded))]
+    
+    logger.info(
+        f"Created analysis DataFrame with {len(analysis_df_exploded)} rows of tokenized content.")
+
     return analysis_df_exploded
 
 
@@ -148,7 +178,7 @@ def create_passages(analysis_df: pd.DataFrame, window_size: int) -> list[str]:
 
 def encode_and_save_embeddings(passages: list[str], output_path: str,
                               model_name: str, max_length: int,
-                              device: torch.device) -> None:
+                              device: DEVICE) -> None:
     """Encodes passages using a SentenceTransformer and saves the embeddings.
 
     Args:
@@ -161,43 +191,33 @@ def encode_and_save_embeddings(passages: list[str], output_path: str,
     bi_encoder = SentenceTransformer(model_name)
     bi_encoder.max_seq_length = max_length
     corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True,
-                                          show_progress_bar=True, device=device)
+                                          device=DEVICE)
     torch.save(corpus_embeddings, output_path)
 
-    print(f"Embeddings saved to '{output_path}'.")
-
+    logger.info(f"Embeddings saved to '{output_path}' with shape: {corpus_embeddings.shape}.")
 
 
 # --- Main Execution ---
 if __name__ == "__main__":
     start_time = time.time()
-    #multiprocessing.set_start_method("spawn", force=True)
 
-    print("\n--- Reading .md files ---")
+    logger.info("--- Starting the document processing pipeline ---")
     file_data = read_md_files_from_subfolders(SOURCE_FOLDER)
 
-    # Optional: Display a sample of the read data
-    # for subfolder, files in list(file_data.items())[:1]:
-    #     print(f"\nSubfolder: {subfolder}")
-    #     for file_name, content in files[:1]:
-    #         print(f"  File: {file_name}, Content (first 100 chars): {content[:100]}...")
-
-    print("\n--- Creating Document List and Tokenizing Content ---")
+    logger.info("--- Creating Document List and Tokenizing Content ---")
     doc_list = create_document_list(file_data)
 
-    print("\n--- Creating Analysis DataFrame ---")
     analysis_df = create_analysis_dataframe(doc_list, WINDOW_SIZE)
 
-    print("\n--- Creating Passages ---")
     passages = create_passages(analysis_df, WINDOW_SIZE)
 
-    print("\n--- Encoding and Saving Embeddings ---")
     encode_and_save_embeddings(passages, OUTPUT_EMBEDDINGS_PATH,
                               BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
 
-    print("\n--- Saving Analysis DataFrame ---")
+    
     analysis_df.to_csv(OUTPUT_ANALYSIS_DF_PATH, index=False)
-    print(f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}'.")
+    logger.info(
+    f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}' with {len(analysis_df)} rows and {len(analysis_df.columns)} columns.")
 
     end_time = time.time()
-    print(f"\nTotal processing time: {end_time - start_time:.2f} seconds")
+    logger.info(f"--- Finished processing in {total_time:.2f} seconds ---")
