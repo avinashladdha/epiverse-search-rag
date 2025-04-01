@@ -6,6 +6,7 @@ import time
 from nltk import sent_tokenize
 from sentence_transformers import SentenceTransformer
 import torch
+import glob
 
 import logging
 from logging.handlers import RotatingFileHandler
@@ -59,20 +60,22 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
     folder = Path(folder_path)
     file_data = {}
     md_files = [
-        f for f in folder.glob('**/*.R?md')
-        if not ('vignettes/man' in str(f) or 'vignettes\\man' in str(f))
+        f for f in glob.iglob(f"{folder}/**/*.md", recursive=True)
+        if "vignettes/man" not in Path(f).as_posix()  
     ]
+
+    print(len(md_files))
     logger.info(f"Found {len(md_files)} files to process.")
     for md_file in md_files:
+        path_obj = Path(md_file)
         try:
-            subfolder = md_file.parent.name
-            folder_name = md_file.parent.parent.name
-            with open(md_file, 'r', encoding='utf-8') as file:
+            subfolder = path_obj.parent.name
+            folder_name = path_obj.parent.parent.name
+            with open(path_obj, 'r', encoding='utf-8') as file:
                 content = file.read()
-
             if folder_name not in file_data:
                 file_data[folder_name] = []
-            file_data[folder_name].append((md_file.name, content))
+            file_data[folder_name].append((path_obj.name, content))
         except Exception as e:
             logger.error(f"Could not read {md_file}: {e}")
     logger.info(f"Successfully read data from {len(file_data)} subfolders.")
@@ -144,6 +147,7 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
         and 'cluster_id'.
     """
     analysis_df = pd.DataFrame(doc_list)
+
     analysis_df['sentence_count'] = analysis_df['tokenized_content'].apply(len)
     analysis_df['content_cleaned'] = analysis_df['content'].apply(lambda x: x.replace('\n', '').replace("#", "").replace("*", ""))
     analysis_df_exploded = analysis_df.explode("tokenized_content")
