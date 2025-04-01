@@ -3,11 +3,32 @@ from sentence_transformers import SentenceTransformer, CrossEncoder, util
 import pandas as pd
 from utils import get_value
 
+
+
+# --- Logging Configuration ---
+log_file_path = "search_engine.log"  # Define the log file path
+# Create a rotating file handler
+log_handler = RotatingFileHandler(
+    log_file_path, maxBytes=10 * 1024 * 1024, backupCount=5)  # 10MB max, 5 backups)
+# Create a formatter
+log_formatter = logging.Formatter(
+    "%(asctime)s - %(levelname)s - %(message)s")
+# Set the formatter for the handler
+log_handler.setFormatter(log_formatter)
+# Get the root logger
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)  # Set the logging level for the logger
+# Add the handler to the logger
+logger.addHandler(log_handler)
+
+
+
+
 class SemanticSearchEngine:
     def __init__(self, corpus_embeddings_path: str, analysis_df_path: str, package_descr_path: str, device: str = "cpu"):
-        print("Loading embeddings...")
+        
         self.corpus_embeddings = torch.load(corpus_embeddings_path, map_location=torch.device(device))
-        print("Loaded embeddings.")
+        logger.info("Loaded embeddings.") 
         self.bi_encoder = SentenceTransformer('multi-qa-MiniLM-L6-cos-v1')
         self.bi_encoder.max_seq_length = 256
         self.cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
