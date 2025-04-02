@@ -7,3 +7,8 @@ RUN Rscript -e 'install.packages("pak")'
 
 RUN Rscript -e 'pak::pak("epiverse-connect/epiverse-scraper")'
 
+# Copy function app files
+ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
+    AzureFunctionsJobHost__Logging__Console__IsEnabled=true
+
+COPY . /home/site/wwwroot
