@@ -3,9 +3,11 @@ FROM mcr.microsoft.com/azure-functions/python:4-python3.12
 # Install R & relevant packages
 RUN apt-get update && apt-get install -y r-base libcurl4-openssl-dev
 
-RUN Rscript -e 'install.packages("pak")'
+RUN Rscript -e 'install.packages("renv")'
 
-RUN Rscript -e 'pak::pak("epiverse-connect/epiverse-scraper")'
+COPY renv.lock renv.lock
+
+RUN Rscript -e 'renv::restore()'
 
 # Install relevant python libraries
 COPY requirements.txt requirements.txt
