@@ -1,0 +1,10 @@
+FROM pytorch/pytorch
+WORKDIR /jobs
+
+COPY ./calculate_embedding.py .
+COPY ./requirements.txt .
+
+
+RUN pip install -r requirements.txt
+
+CMD ["python3", "calculate_embedding.py"]
