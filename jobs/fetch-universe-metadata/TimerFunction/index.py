@@ -42,7 +42,7 @@ def main(mytimer: func.TimerRequest, universe="epiverse-connect"):
         docs_url = next((url for url in url_list if not url.startswith("https://github.com")), None)
 
         processed_metadata.append({
-            "Package": pkg.get("Package"),
+            "package": pkg.get("Package"),
             "title": pkg.get("Title"),
             "description": pkg.get("Description"),
             "logo": pkg.get("_pkglogo"),
