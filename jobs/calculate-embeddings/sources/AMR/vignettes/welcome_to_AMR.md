@@ -1,0 +1,67 @@
+---
+title: "Welcome to the `AMR` package"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    toc_depth: 3
+vignette: >
+  %\VignetteIndexEntry{Welcome to the `AMR` package}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include = FALSE, results = 'markup'}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7.5,
+  fig.height = 5
+)
+```
+
+Note: to keep the package size as small as possible, we only include this vignette on CRAN. You can read more vignettes on our website about how to conduct AMR data analysis, determine MDROs, find explanation of EUCAST and CLSI breakpoints, and much more: <https://msberends.github.io/AMR/articles/>.
+
+----
+
+The `AMR` package is a [free and open-source](https://msberends.github.io/AMR/#copyright) R package with [zero dependencies](https://en.wikipedia.org/wiki/Dependency_hell) to simplify the analysis and prediction of Antimicrobial Resistance (AMR) and to work with microbial and antimicrobial data and properties, by using evidence-based methods. **Our aim is to provide a standard** for clean and reproducible AMR data analysis, that can therefore empower epidemiological analyses to continuously enable surveillance and treatment evaluation in any setting. [Many different researchers](https://msberends.github.io/AMR/authors.html) from around the globe are continually helping us to make this a successful and durable project!
+
+This work was published in the Journal of Statistical Software (Volume 104(3); [DOI 10.18637/jss.v104.i03](https://doi.org/10.18637/jss.v104.i03)) and formed the basis of two PhD theses ([DOI 10.33612/diss.177417131](https://doi.org/10.33612/diss.177417131) and [DOI 10.33612/diss.192486375](https://doi.org/10.33612/diss.192486375)).
+
+After installing this package, R knows `r AMR:::format_included_data_number(AMR::microorganisms)` distinct microbial species and all `r AMR:::format_included_data_number(rbind(AMR::antibiotics[, "atc", drop = FALSE], AMR::antivirals[, "atc", drop = FALSE]))` antibiotic, antimycotic and antiviral drugs by name and code (including ATC, EARS-Net, ASIARS-Net, PubChem, LOINC and SNOMED CT), and knows all about valid SIR and MIC values. The integral breakpoint guidelines from CLSI and EUCAST are included from the last 10 years. It supports and can read any data format, including WHONET data.
+
+With the help of contributors from all corners of the world, the `AMR` package is available in English, Czech, Chinese, Danish, Dutch, Finnish, French, German, Greek, Italian, Japanese, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Turkish, and Ukrainian. Antimicrobial drug (group) names and colloquial microorganism names are provided in these languages.
+
+This package is fully independent of any other R package and works on Windows, macOS and Linux with all versions of R since R-3.0 (April 2013). **It was designed to work in any setting, including those with very limited resources**. Since its first public release in early 2018, this package has been downloaded from more than 175 countries.
+
+This package can be used for:
+
+  * Reference for the taxonomy of microorganisms, since the package contains all microbial (sub)species from the List of Prokaryotic names with Standing in Nomenclature (LPSN) and the Global Biodiversity Information Facility (GBIF)
+  * Interpreting raw MIC and disk diffusion values, based on the latest CLSI or EUCAST guidelines
+  * Retrieving antimicrobial drug names, doses and forms of administration from clinical health care records
+  * Determining first isolates to be used for AMR data analysis
+  * Calculating antimicrobial resistance
+  * Determining multi-drug resistance (MDR) / multi-drug resistant organisms (MDRO)
+  * Calculating (empirical) susceptibility of both mono therapy and combination therapies
+  * Predicting future antimicrobial resistance using regression models
+  * Getting properties for any microorganism (like Gram stain, species, genus or family)
+  * Getting properties for any antibiotic (like name, code of EARS-Net/ATC/LOINC/PubChem, defined daily dose or trade name)
+  * Plotting antimicrobial resistance
+  * Applying EUCAST expert rules
+  * Getting SNOMED codes of a microorganism, or getting properties of a microorganism based on a SNOMED code
+  * Getting LOINC codes of an antibiotic, or getting properties of an antibiotic based on a LOINC code
+  * Machine reading the EUCAST and CLSI guidelines from 2011-2020 to translate MIC values and disk diffusion diameters to SIR
+  * Principal component analysis for AMR
+  
+All reference data sets (about microorganisms, antibiotics, SIR interpretation, EUCAST rules, etc.) in this `AMR` package are publicly and freely available. We continually export our data sets to formats for use in R, SPSS, SAS, Stata and Excel. We also supply flat files that are machine-readable and suitable for input in any software program, such as laboratory information systems. Please find [all download links on our website](https://msberends.github.io/AMR/articles/datasets.html), which is automatically updated with every code change.
+
+This R package was created for both routine data analysis and academic research at the Faculty of Medical Sciences of the [University of Groningen](https://www.rug.nl), in collaboration with non-profit organisations [Certe Medical Diagnostics and Advice Foundation](https://www.certe.nl) and [University Medical Center Groningen](https://www.umcg.nl), and is being [actively and durably maintained](https://msberends.github.io/AMR/news/) by two public healthcare organisations in the Netherlands.
+
+----
+
+<small>
+This AMR package for R is free, open-source software and licensed under the [GNU General Public License v2.0 (GPL-2)](https://msberends.github.io/AMR/LICENSE-text.html). These requirements are consequently legally binding: modifications must be released under the same license when distributing the package, changes made to the code must be documented, source code must be made available when the package is distributed, and a copy of the license and copyright notice must be included with the package.
+</small>
+

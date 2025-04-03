@@ -7,40 +7,29 @@ from nltk import sent_tokenize
 from sentence_transformers import SentenceTransformer
 import torch
 import glob
-
-import logging
+import yaml
+from azure.identity import DefaultAzureCredential
+from azure.storage.blob import BlobServiceClient
+import logging.config
 from logging.handlers import RotatingFileHandler
+import nltk
+nltk.download('punkt_tab')
 
 
 
-# --- Logging Configuration ---
-log_file_path = "calculate_embedding.log"  # Define the log file path
 
-# Create a rotating file handler
-log_handler = RotatingFileHandler(
-    log_file_path, maxBytes=10 * 1024 * 1024, backupCount=5  # 10MB max, 5 backups
-)
-# Create a formatter
-log_formatter = logging.Formatter(
-    "%(asctime)s - %(levelname)s - %(message)s"
-)
+with open('logging_config.yaml', 'r') as f:
+    config = yaml.safe_load(f)
 
-# Set the formatter for the handler
-log_handler.setFormatter(log_formatter)
-
-# Get the root logger
-logger = logging.getLogger()
-logger.setLevel(logging.INFO)  # Set the logging level for the logger
-
-# Add the handler to the logger
-logger.addHandler(log_handler)
+logging.config.dictConfig(config)
+logger = logging.getLogger(__name__)
 
 
 
 # --- Configuration ---
-SOURCE_FOLDER = './data/sources/'
-OUTPUT_EMBEDDINGS_PATH = './data/corpus_embeddings.pth'
-OUTPUT_ANALYSIS_DF_PATH = './data/analysis_df.csv'
+SOURCE_FOLDER = '/sources/'
+OUTPUT_EMBEDDINGS_PATH = 'corpus_embeddings.pth'
+OUTPUT_ANALYSIS_DF_PATH = 'analysis_df.csv'
 BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
 MAX_SEQ_LENGTH = 256
 WINDOW_SIZE = 7
@@ -224,4 +213,5 @@ if __name__ == "__main__":
     f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}' with {len(analysis_df)} rows and {len(analysis_df.columns)} columns.")
 
     end_time = time.time()
+    total_time = end_time - start_time
     logger.info(f"--- Finished processing in {total_time:.2f} seconds ---")
