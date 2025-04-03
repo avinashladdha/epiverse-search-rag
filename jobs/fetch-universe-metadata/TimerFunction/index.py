@@ -1,5 +1,6 @@
 import azure.functions as func
 import requests
+import json
 
 def main(mytimer: func.TimerRequest, universe="epiverse-connect"):
     """
@@ -49,5 +50,8 @@ def main(mytimer: func.TimerRequest, universe="epiverse-connect"):
             "source": pkg.get("RemoteUrl"),
             "articles": articles
         })
+
+    with open("metadata.json", "w", encoding="utf-8") as f:
+        json.dump(processed_metadata, f, indent = 4)
 
     return processed_metadata
