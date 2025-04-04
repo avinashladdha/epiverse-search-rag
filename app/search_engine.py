@@ -60,26 +60,19 @@ class SemanticSearchEngine:
 
         hits = sorted(hits, key=lambda x: x['cross-score'], reverse=True)
 
-        results = []
-        # FIXME: this should be converted to a pandas merge
-        for hit in hits[:20]:
-            package_name = get_value(self.analysis_df, 'package_name', self.analysis_df['cluster_id'] == hit['corpus_id'])
-            logo = get_value(self.analysis_df, 'logo', self.analysis_df['cluster_id'] == hit['corpus_id'])
-            website = get_value(self.analysis_df, 'website', self.analysis_df['cluster_id'] == hit['corpus_id'])
-            source_package = get_value(self.analysis_df, 'source', self.analysis_df['cluster_id'] == hit['corpus_id'])
-            if package_name:
-                results.append({
-                    "package_name": package_name,
-                    "logo": logo,
-                    "website": website,
-                    "source": source_package,
-                    "vignettes": vignettes,
-                    "relevance": round(hit['score'], 4),
-                })
+        hits_df = pd.DataFrame(hits).head(20)
 
-        # Remove duplicates and sort by relevance
-        results_df = pd.DataFrame(results).drop_duplicates(subset=['package_name'], keep='first')
-        # FIXME: shouldn't we sort rows BEFORE we remove duplicates? Otherwise, we do not
-        # necessarily keep the best score for all packages
-        # results_df = results_df.sort_values(by='relevance', ascending=False).head(num_results)
+        merged_df = pd.merge(hits_df, self.analysis_df, left_on='corpus_id', right_on='cluster_id', how='left')
+        merged_df = merged_df.drop_duplicates(subset=['package_name'], keep='first')
+        merged_df = merged_df.drop(columns=['corpus_id', 'cluster_id', 'score',
+                                            'content','tokenized_content','sentence_count'
+                                            'content_cleaned','file_name'
+                                            ], axis=1)
+        merged_df['cross-score'] = merged_df['cross-score'].apply(lambda x : round(x, 4))
+        # Rename specific columns using a dictionary
+        new_columns = {'cross-score': 'relevance'}
+        merged_renamed = merged_df.rename(columns=new_columns)
+
+        # Sort by relevance and Remove duplicates
+        results_df = merged_renamed.sort_values(by='relevance', ascending=False).drop_duplicates(subset=['package_name'], keep='first')
         return results_df.to_dict('records')
