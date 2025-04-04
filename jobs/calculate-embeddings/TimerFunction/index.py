@@ -10,6 +10,7 @@ import glob
 import yaml
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient
+import azure.functions as func
 import logging.config
 from logging.handlers import RotatingFileHandler
 import nltk
