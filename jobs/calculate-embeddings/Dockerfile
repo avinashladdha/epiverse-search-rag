@@ -3,10 +3,15 @@ FROM mcr.microsoft.com/azure-functions/python:4-python3.12
 WORKDIR /jobs
 COPY requirements.txt .
 COPY logging_config.yaml .
-COPY sources /sources/
 
 RUN pip install -r requirements.txt
 RUN pip install azure-functions azure-storage-blob azure-identity
+
+# Install R & relevant packages
+RUN apt-get update && apt-get install -y r-base libcurl4-openssl-dev
+RUN Rscript -e 'install.packages("renv")'
+COPY renv.lock renv.lock
+RUN Rscript -e 'renv::restore()'
 
 # Copied from https://github.com/Azure/azure-functions-core-tools?tab=readme-ov-file#debian-12
 RUN apt-get update && apt-get install gpg wget -y && \

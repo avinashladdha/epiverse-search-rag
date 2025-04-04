@@ -8,6 +8,7 @@ from sentence_transformers import SentenceTransformer
 import torch
 import glob
 import yaml
+import subprocess
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient
 import azure.functions as func
@@ -23,7 +24,7 @@ logging.config.dictConfig(config)
 logger = logging.getLogger(__name__)
 
 # --- Configuration ---
-SOURCE_FOLDER = '/sources/'
+SOURCE_FOLDER = 'sources'
 OUTPUT_EMBEDDINGS_PATH = 'corpus_embeddings.pth'
 OUTPUT_ANALYSIS_DF_PATH = 'analysis_df.csv'
 BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
@@ -32,8 +33,15 @@ WINDOW_SIZE = 7
 MIN_SENTENCE_TOKENS = 5
 DEVICE = torch.device("cpu")
 
-
 # --- Utility Functions ---
+def get_universe_docs(universe: str, destdir: str) -> None:
+    try:
+        # FIXME: use args from function
+        result = subprocess.run(["Rscript", "-e", "epiverse.scraper::get_universe_docs(universe = 'epiverse-trace', destdir = 'sources')"], check=True, capture_output=True, text=True)
+        logging.info("R script ran successfully\n")
+    except subprocess.CalledProcessError as e:
+        logging.error("Error running R script:\n" + e.stdout)
+
 def read_md_files_from_subfolders(folder_path: str) -> dict:
     """Reads .md files from subfolders, excluding those in 'vignettes/man'.
        Args:
@@ -189,6 +197,9 @@ def encode_and_save_embeddings(passages: list[str], output_path: str,
 # --- Main Execution ---
 def main(mytimer: func.TimerRequest) -> None:
     start_time = time.time()
+
+    logger.info("--- Fetching the documentation files ---")
+    get_universe_docs("epiverse-connect", SOURCE_FOLDER)
 
     logger.info("--- Starting the document processing pipeline ---")
     file_data = read_md_files_from_subfolders(SOURCE_FOLDER)
