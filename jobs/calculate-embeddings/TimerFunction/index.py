@@ -36,8 +36,12 @@ DEVICE = torch.device("cpu")
 # --- Utility Functions ---
 def get_universe_docs(universe: str, destdir: str) -> None:
     try:
-        # FIXME: use args from function
-        result = subprocess.run(["Rscript", "-e", "epiverse.scraper::get_universe_docs(universe = 'epiverse-trace', destdir = 'sources')"], check=True, capture_output=True, text=True)
+        result = subprocess.run(
+            ["Rscript", "-e", f"epiverse.scraper::get_universe_docs('{universe}', '{destdir}')"],
+            check=True,
+            capture_output=True,
+            text=True
+        )
         logging.info("R script ran successfully\n")
     except subprocess.CalledProcessError as e:
         logging.error("Error running R script:\n" + e.stdout)
