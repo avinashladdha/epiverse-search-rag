@@ -14,6 +14,7 @@ from azure.storage.blob import BlobServiceClient
 import azure.functions as func
 import logging.config
 from logging.handlers import RotatingFileHandler
+import tempfile
 import nltk
 nltk.download('punkt_tab')
 
@@ -24,7 +25,8 @@ logging.config.dictConfig(config)
 logger = logging.getLogger(__name__)
 
 # --- Configuration ---
-SOURCE_FOLDER = 'sources'
+tmpdir = tempfile.TemporaryDirectory(prefix = "sources_")
+SOURCE_FOLDER = tmpdir.name
 OUTPUT_EMBEDDINGS_PATH = 'corpus_embeddings.pth'
 OUTPUT_ANALYSIS_DF_PATH = 'analysis_df.csv'
 BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
