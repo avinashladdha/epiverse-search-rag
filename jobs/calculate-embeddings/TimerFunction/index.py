@@ -15,16 +15,11 @@ from logging.handlers import RotatingFileHandler
 import nltk
 nltk.download('punkt_tab')
 
-
-
-
 with open('logging_config.yaml', 'r') as f:
     config = yaml.safe_load(f)
 
 logging.config.dictConfig(config)
 logger = logging.getLogger(__name__)
-
-
 
 # --- Configuration ---
 SOURCE_FOLDER = '/sources/'
@@ -50,7 +45,7 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
     file_data = {}
     md_files = [
         f for f in glob.iglob(f"{folder}/**/*.md", recursive=True)
-        if "vignettes/man" not in Path(f).as_posix()  
+        if "vignettes/man" not in Path(f).as_posix()
     ]
 
     print(len(md_files))
@@ -142,7 +137,7 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
     analysis_df_exploded = analysis_df.explode("tokenized_content")
     analysis_df_exploded['tokenized_content'] = analysis_df_exploded['tokenized_content'].apply(lambda x: str(x))
     analysis_df_exploded['cluster_id'] = [i // window_size for i in range(len(analysis_df_exploded))]
-    
+
     logger.info(
         f"Created analysis DataFrame with {len(analysis_df_exploded)} rows of tokenized content.")
 
@@ -191,7 +186,7 @@ def encode_and_save_embeddings(passages: list[str], output_path: str,
 
 
 # --- Main Execution ---
-if __name__ == "__main__":
+def main(mytimer: func.TimerRequest) -> None:
     start_time = time.time()
 
     logger.info("--- Starting the document processing pipeline ---")
@@ -207,7 +202,7 @@ if __name__ == "__main__":
     encode_and_save_embeddings(passages, OUTPUT_EMBEDDINGS_PATH,
                               BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
 
-    
+
     analysis_df.to_csv(OUTPUT_ANALYSIS_DF_PATH, index=False)
     logger.info(
     f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}' with {len(analysis_df)} rows and {len(analysis_df.columns)} columns.")
