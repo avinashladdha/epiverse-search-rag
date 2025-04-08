@@ -1,9 +1,6 @@
 import torch
 from sentence_transformers import SentenceTransformer, CrossEncoder, util
 import pandas as pd
-from utils import get_value
-
-
 
 # --- Logging Configuration ---
 log_file_path = "search_engine.log"  # Define the log file path
