@@ -65,8 +65,9 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
     # - quarto files (.qmd)
     # All these formats are based on markdown and can be parsed as plain text.
     md_files = [
-        f for f in glob.iglob(f"{folder}/**/*.[Rq]?md", recursive=True)
+        f for f in glob.iglob(f"{folder}/**/*md", recursive=True)
         if "vignettes/man" not in Path(f).as_posix()
+          and f.endswith((".Rmd", ".md", ".qmd"))
     ]
 
     print(len(md_files))
