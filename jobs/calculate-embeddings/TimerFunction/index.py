@@ -97,7 +97,7 @@ def preprocess_content(content: str) -> list[list[str]]:
     Returns:
         A list of lists, where each inner list contains sentences (list of string).
     """
-    cleaned_content = content.replace("\r\n", "\n").replace("\n", "").replace("#", "").replace("*", "")
+    cleaned_content = content.replace("\r\n", "\n").replace("\n", " ").replace("#", "").replace("*", "")
     paragraphs = cleaned_content.split("\n\n")
     sentences = []
     for paragraph in paragraphs:
