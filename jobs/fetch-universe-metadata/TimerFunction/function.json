@@ -1,10 +1,11 @@
 {
   "bindings": [
     {
-      "name": "myTimer",
+      "name": "mytimer",
       "type": "timerTrigger",
       "direction": "in",
-      "schedule": "0 4 * * 1"
+      "schedule": "0 4 * * 1",
+      "runOnStartup": true
     }
   ]
 }
