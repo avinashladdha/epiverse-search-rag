@@ -75,4 +75,6 @@ class SemanticSearchEngine:
 
         # Sort by relevance and Remove duplicates
         results_df = merged_renamed.sort_values(by='relevance', ascending=False).drop_duplicates(subset=['package_name'], keep='first')
+        results_df = results_df.fillna('')
+
         return results_df.to_dict('records')
