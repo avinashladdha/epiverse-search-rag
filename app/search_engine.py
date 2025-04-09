@@ -62,8 +62,7 @@ class SemanticSearchEngine:
         merged_df = pd.merge(hits_df, self.analysis_df, left_on='corpus_id', right_on='cluster_id', how='left')
         merged_df = merged_df.drop_duplicates(subset=['package_name'], keep='first')
         merged_df = merged_df.drop(columns=['corpus_id', 'cluster_id', 'score',
-                                            'content','tokenized_content','sentence_count',
-                                            'content_cleaned','file_name'
+                                            'tokenized_content', 'file_name'
                                             ], axis=1)
         merged_df['cross-score'] = merged_df['cross-score'].apply(lambda x : round(x, 4))
         # Rename specific columns using a dictionary

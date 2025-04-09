@@ -149,16 +149,14 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
 
     Returns:
         A Pandas DataFrame with columns 'package_name', 'file_name',
-        'content', 'tokenized_content', 'sentence_count', 'content_cleaned',
-        and 'cluster_id'.
+        'tokenized_content' and 'cluster_id'.
     """
     analysis_df = pd.DataFrame(doc_list)
 
-    analysis_df['sentence_count'] = analysis_df['tokenized_content'].apply(len)
-    analysis_df['content_cleaned'] = analysis_df['content'].apply(lambda x: x.replace('\n', '').replace("#", "").replace("*", ""))
     analysis_df_exploded = analysis_df.explode("tokenized_content")
     analysis_df_exploded['tokenized_content'] = analysis_df_exploded['tokenized_content'].apply(lambda x: str(x))
     analysis_df_exploded['cluster_id'] = [i // window_size for i in range(len(analysis_df_exploded))]
+    analysis_df_exploded = analysis_df_exploded[['package_name', 'file_name', 'tokenized_content', 'cluster_id']]
 
     logger.info(
         f"Created analysis DataFrame with {len(analysis_df_exploded)} rows of tokenized content.")
