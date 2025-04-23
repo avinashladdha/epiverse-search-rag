@@ -45,7 +45,9 @@ def get_universe_docs(universe: str, destdir: str) -> None:
         )
         logging.info("R script ran successfully\n")
     except subprocess.CalledProcessError as e:
-        logging.error("Error running R script:\n" + e.stdout)
+        error = RuntimeError("Error running R script:\n" + e.stderr)
+        logging.error(error)
+        raise error
 
 def read_md_files_from_subfolders(folder_path: str) -> dict:
     """Reads .md files from subfolders, excluding those in 'vignettes/man'.
