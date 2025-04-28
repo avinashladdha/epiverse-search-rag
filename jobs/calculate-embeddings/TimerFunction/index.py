@@ -16,7 +16,6 @@ import logging.config
 from logging.handlers import RotatingFileHandler
 import tempfile
 import nltk
-nltk.download('punkt_tab')
 
 with open('logging_config.yaml', 'r') as f:
     config = yaml.safe_load(f)

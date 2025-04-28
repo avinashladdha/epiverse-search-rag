@@ -6,6 +6,8 @@ COPY logging_config.yaml .
 
 RUN pip install -r requirements.txt
 RUN pip install azure-functions azure-storage-blob azure-identity
+# We do this at build time rather than runtime to save resources
+RUN python -m nltk.downloader punkt_tab
 
 # Install R & relevant packages
 RUN apt-get update && apt-get install -y r-base libcurl4-openssl-dev
