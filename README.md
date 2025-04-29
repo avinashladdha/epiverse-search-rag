@@ -28,7 +28,7 @@ It has the following characteristics:
 - Runtime: python (+ R as a subprocess invoked from python)
 - Outputs:
   - `analysis_df.csv`: Preprocessed text from documentation files (~10 MB)
--   `corpus_embeddings.pth`: Binary file containing vector embeddings (~1 MB)
+  - `corpus_embeddings.pth`: Binary file containing vector embeddings (~1 MB)
 
 ### "Fetch universe metadata" component (stored in`jobs/fetch-universe-metadata`)
 
