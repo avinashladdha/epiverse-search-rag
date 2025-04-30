@@ -1,11 +1,6 @@
-import azure.functions as func
-from azure.storage.blob import BlobServiceClient
 import requests
-import json
-import os
-import logging
 
-def main(mytimer: func.TimerRequest):
+def fetch_universe_metadata(universe = "epiverse-connect"):
     """
     Fetch metadata about packages from an R-universe repository.
 
@@ -23,28 +18,6 @@ def main(mytimer: func.TimerRequest):
             - List of article URLs
     """
 
-    # Get environment variable
-    connection_str = os.getenv("AzureWebJobsStorage")
-
-    if not connection_str:
-        logging.error("AzureWebJobsStorage environment variable is not set or empty!")
-        raise ValueError("AzureWebJobsStorage is required but not provided.")
-
-    logging.info(f"Using AzureWebJobsStorage: {connection_str}")
-    
-    blob_service_client = BlobServiceClient.from_connection_string(connection_str)
-    container_name = "metadata"
-    blob_name = "metadata.json"
-
-    # Ensure container exists
-    container_client = blob_service_client.get_container_client(container_name)
-    try:
-        container_client.create_container()
-    except Exception:
-        pass  # It's okay if it already exists
-
-
-    universe = "epiverse-connect"
     url = f"https://{universe}.r-universe.dev/api/packages"
     headers = {"User-Agent": "epiverse-connect metadata collection script"}
 
@@ -76,12 +49,5 @@ def main(mytimer: func.TimerRequest):
             "source": pkg.get("RemoteUrl"),
             "articles": articles
         })
-    #  store file locally if needed  
-    with open("metadata.json", "w", encoding="utf-8") as f:
-        json.dump(processed_metadata, f, indent = 4)
-    
-    # Upload blob
-    blob_client = container_client.get_blob_client(blob_name)
-    blob_client.upload_blob(json.dumps(processed_metadata).encode('utf-8'), overwrite=True)
 
-    # return processed_metadata
+    return processed_metadata

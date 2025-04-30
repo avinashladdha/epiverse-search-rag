@@ -3,8 +3,7 @@ FROM mcr.microsoft.com/azure-functions/python:4-python3.12
 # to be added when volume is not mounted
 # COPY . /home/site/wwwroot/
 # RUN pip install -r /home/site/wwwroot/requirements.txt
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install azure-functions azure-storage-blob azure-identity
 
 RUN apt-get update && \
     apt-get install -y curl apt-transport-https gnupg && \
