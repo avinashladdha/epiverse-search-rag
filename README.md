@@ -8,7 +8,7 @@ It is composed of two primary components:
 
 This README describes the repository structure and the basic properties of each component.
 
-For installation instructions and runtime configuration, please refer to the project wiki.
+For installation instructions and runtime configuration, please refer to the [project wiki](https://github.com/epiverse-connect/epiverse-search-backend/wiki).
 
 ## Scheduled Jobs (`jobs/`)
 
