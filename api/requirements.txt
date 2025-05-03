@@ -6,3 +6,4 @@ torch==2.4.1
 uvicorn==0.34.0
 # This is not listed as an explicit import but is necessary for the SentenceTransformer
 huggingface-hub==0.25.1
+azure-storage-blob==12.16.0

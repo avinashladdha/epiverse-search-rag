@@ -1,765 +1,1442 @@
 [
-  {
-    "Package": ["cleanepi"],
-    "logo": ["https://github.com/epiverse-trace/cleanepi/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/cleanepi/"],
-    "source": ["https://github.com/epiverse-trace/cleanepi"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/cleanepi/cleanepi.html", "https://epiverse-connect.r-universe.dev/articles/cleanepi/design_principle.html"]
-  },
-  {
-    "Package": ["cholera"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/lindbrook/cholera"],
-    "articles": []
-  },
-  {
-    "Package": ["pomp"],
-    "logo": {},
-    "website": ["https://kingaa.github.io/pomp/"],
-    "source": ["https://github.com/kingaa/pomp"],
-    "articles": []
-  },
-  {
-    "Package": ["AMR"],
-    "logo": ["https://github.com/msberends/AMR/raw/HEAD/logo.svg"],
-    "website": ["https://msberends.github.io/AMR/"],
-    "source": ["https://github.com/msberends/AMR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/AMR/AMR_for_Python.html", "https://epiverse-connect.r-universe.dev/articles/AMR/welcome_to_AMR.html"]
-  },
-  {
-    "Package": ["adegenet"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/thibautjombart/adegenet"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiNow2"],
-    "logo": {},
-    "website": ["https://epiforecasts.io/EpiNow2/"],
-    "source": ["https://github.com/epiforecasts/EpiNow2"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiNow2/case-studies.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections_options.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/gaussian_process_implementation_details.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/EpiNow2.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_secondary.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_truncation.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/epinow.html", "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections_workflow.html"]
-  },
-  {
-    "Package": ["cfr"],
-    "logo": ["https://github.com/epiverse-trace/cfr/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/cfr/"],
-    "source": ["https://github.com/epiverse-trace/cfr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/cfr/delay_distributions.html", "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_static_severity.html", "https://epiverse-connect.r-universe.dev/articles/cfr/cfr.html", "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_from_individual_data.html", "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_time_varying_severity.html", "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_ascertainment.html", "https://epiverse-connect.r-universe.dev/articles/cfr/data_from_incidence2.html", "https://epiverse-connect.r-universe.dev/articles/cfr/software-permissions.html"]
-  },
-  {
-    "Package": ["sivirep"],
-    "logo": ["https://github.com/epiverse-trace/sivirep/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/sivirep/"],
-    "source": ["https://github.com/epiverse-trace/sivirep"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/sivirep/sivirep.html"]
-  },
-  {
-    "Package": ["epikit"],
-    "logo": {},
-    "website": ["https://r4epis.netlify.app"],
-    "source": ["https://github.com/R4EPI/epikit"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epikit/intro.html"]
-  },
-  {
-    "Package": ["epiparameterDB"],
-    "logo": ["https://github.com/epiverse-trace/epiparameterDB/raw/HEAD/man/figures/logo.svg"],
-    "website": [null],
-    "source": ["https://github.com/epiverse-trace/epiparameterDB"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiparameterDB/database.html", "https://epiverse-connect.r-universe.dev/articles/epiparameterDB/design-principles.html"]
-  },
-  {
-    "Package": ["epichains"],
-    "logo": ["https://github.com/epiverse-trace/epichains/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/epichains/"],
-    "source": ["https://github.com/epiverse-trace/epichains"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epichains/design-principles.html", "https://epiverse-connect.r-universe.dev/articles/epichains/epichains.html", "https://epiverse-connect.r-universe.dev/articles/epichains/branching_process_literature.html", "https://epiverse-connect.r-universe.dev/articles/epichains/interventions.html", "https://epiverse-connect.r-universe.dev/articles/epichains/projecting_incidence.html", "https://epiverse-connect.r-universe.dev/articles/epichains/theoretical_background.html"]
-  },
-  {
-    "Package": ["popEpi"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/FinnishCancerRegistry/popEpi"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/popEpi/sir.html", "https://epiverse-connect.r-universe.dev/articles/popEpi/survtab_examples.html"]
-  },
-  {
-    "Package": ["epiR"],
-    "logo": ["https://github.com/mstevenson888/epiR/raw/HEAD/man/figures/logo.png"],
-    "website": [],
-    "source": ["https://github.com/mstevenson888/epiR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiR/epiR_descriptive.html", "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_surveillance.html", "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_measures_of_association.html", "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_sample_size.html"]
-  },
-  {
-    "Package": ["SimInf"],
-    "logo": {},
-    "website": ["http://stewid.github.io/SimInf/"],
-    "source": ["https://github.com/stewid/SimInf"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/SimInf/post-process-data.html", "https://epiverse-connect.r-universe.dev/articles/SimInf/scheduled-events.html", "https://epiverse-connect.r-universe.dev/articles/SimInf/SimInf.pdf"]
-  },
-  {
-    "Package": ["epiworldR"],
-    "logo": {},
-    "website": ["https://uofuepibio.github.io/epiworldR/"],
-    "source": ["https://github.com/UofUEpiBio/epiworldR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiworldR/getting-started.html", "https://epiverse-connect.r-universe.dev/articles/epiworldR/implementation.html", "https://epiverse-connect.r-universe.dev/articles/epiworldR/likelihood-free-mcmc.html", "https://epiverse-connect.r-universe.dev/articles/epiworldR/mixing.html", "https://epiverse-connect.r-universe.dev/articles/epiworldR/run-multiple.html"]
-  },
-  {
-    "Package": ["EpiModel"],
-    "logo": {},
-    "website": ["https://www.epimodel.org/"],
-    "source": ["https://github.com/EpiModel/EpiModel"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiModel/Intro.html", "https://epiverse-connect.r-universe.dev/articles/EpiModel/attributes-and-summary-statistics.html", "https://epiverse-connect.r-universe.dev/articles/EpiModel/model-parameters.html", "https://epiverse-connect.r-universe.dev/articles/EpiModel/network-objects.html"]
-  },
-  {
-    "Package": ["epiparameter"],
-    "logo": ["https://github.com/epiverse-trace/epiparameter/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://epiverse-trace.github.io/epiparameter/"],
-    "source": ["https://github.com/epiverse-trace/epiparameter"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiparameter/database.html", "https://epiverse-connect.r-universe.dev/articles/epiparameter/data_protocol.html", "https://epiverse-connect.r-universe.dev/articles/epiparameter/design_principles.html", "https://epiverse-connect.r-universe.dev/articles/epiparameter/epiparameter.html", "https://epiverse-connect.r-universe.dev/articles/epiparameter/extract_convert.html"]
-  },
-  {
-    "Package": ["epigrowthfit"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/davidearn/epigrowthfit"],
-    "articles": []
-  },
-  {
-    "Package": ["hmsidwR"],
-    "logo": ["https://github.com/Fgazzelloni/hmsidwR/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://fgazzelloni.github.io/hmsidwR/"],
-    "source": ["https://github.com/Fgazzelloni/hmsidwR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/hmsidwR/hmsidwR.html"]
-  },
-  {
-    "Package": ["epicontacts"],
-    "logo": {},
-    "website": ["https://www.repidemicsconsortium.org/epicontacts/"],
-    "source": ["https://github.com/reconhub/epicontacts"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epicontacts/epicontacts_class.html", "https://epiverse-connect.r-universe.dev/articles/epicontacts/epicontacts.html"]
-  },
-  {
-    "Package": ["nosoi"],
-    "logo": ["https://github.com/slequime/nosoi/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://slequime.github.io/nosoi/"],
-    "source": ["https://github.com/slequime/nosoi"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/nosoi/nosoi.html", "https://epiverse-connect.r-universe.dev/articles/nosoi/output.html", "https://epiverse-connect.r-universe.dev/articles/nosoi/continuous.html", "https://epiverse-connect.r-universe.dev/articles/nosoi/discrete.html", "https://epiverse-connect.r-universe.dev/articles/nosoi/none.html"]
-  },
-  {
-    "Package": ["Epi"],
-    "logo": {},
-    "website": ["http://bendixcarstensen.com/Epi/"],
-    "source": ["https://github.com/cran/Epi"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/Epi/crisk.pdf", "https://epiverse-connect.r-universe.dev/articles/Epi/aaflup.pdf", "https://epiverse-connect.r-universe.dev/articles/Epi/simLexis.pdf", "https://epiverse-connect.r-universe.dev/articles/Epi/addLexis.pdf", "https://epiverse-connect.r-universe.dev/articles/Epi/yll.pdf"]
-  },
-  {
-    "Package": ["finalsize"],
-    "logo": ["https://github.com/epiverse-trace/finalsize/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/finalsize/"],
-    "source": ["https://github.com/epiverse-trace/finalsize"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/finalsize/finalsize.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/compare_sir_model.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/susceptibility_matrices.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/varying_contacts.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/varying_susceptibility.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/uncertainty_params.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/demographic_turnover.html", "https://epiverse-connect.r-universe.dev/articles/finalsize/theoretical_background.html"]
-  },
-  {
-    "Package": ["epiCo"],
-    "logo": ["https://github.com/epiverse-trace/epiCo/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/epiCo/"],
-    "source": ["https://github.com/epiverse-trace/epiCo"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiCo/demographic_vignette.html", "https://epiverse-connect.r-universe.dev/articles/epiCo/endemic_channel.html", "https://epiverse-connect.r-universe.dev/articles/epiCo/spatiotemporal_vignette.html"]
-  },
-  {
-    "Package": ["nhanesA"],
-    "logo": {},
-    "website": ["https://cran.r-project.org/package=nhanesA"],
-    "source": ["https://github.com/cjendres1/nhanes"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/nhanesA/Introducing_nhanesA.html", "https://epiverse-connect.r-universe.dev/articles/nhanesA/UsingSurveyWeights.html"]
-  },
-  {
-    "Package": ["diyar"],
-    "logo": {},
-    "website": ["https://olisansonwu.github.io/diyar/index.html"],
-    "source": ["https://github.com/OlisaNsonwu/diyar"],
-    "articles": []
-  },
-  {
-    "Package": ["linelist"],
-    "logo": ["https://github.com/epiverse-trace/linelist/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://epiverse-trace.github.io/linelist/"],
-    "source": ["https://github.com/epiverse-trace/linelist"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/linelist/linelist.html", "https://epiverse-connect.r-universe.dev/articles/linelist/compat-dplyr.html", "https://epiverse-connect.r-universe.dev/articles/linelist/design-principles.html", "https://epiverse-connect.r-universe.dev/articles/linelist/software-permissions.html"]
-  },
-  {
-    "Package": ["vaccineff"],
-    "logo": ["https://github.com/epiverse-trace/vaccineff/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://epiverse-trace.github.io/vaccineff/"],
-    "source": ["https://github.com/epiverse-trace/vaccineff"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/vaccineff/cohort_design.html", "https://epiverse-connect.r-universe.dev/articles/vaccineff/other_designs.html", "https://epiverse-connect.r-universe.dev/articles/vaccineff/vaccineff.html"]
-  },
-  {
-    "Package": ["contactdata"],
-    "logo": ["https://github.com/bisaloo/contactdata/raw/HEAD/man/figures/logo.svg"],
-    "website": ["https://hugogruson.fr/contactdata/"],
-    "source": ["https://github.com/bisaloo/contactdata"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/contactdata/countries.html", "https://epiverse-connect.r-universe.dev/articles/contactdata/visualise_age.html", "https://epiverse-connect.r-universe.dev/articles/contactdata/visualise_contact.html"]
-  },
-  {
-    "Package": ["COVID19"],
-    "logo": ["https://github.com/covid19datahub/COVID19/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://covid19datahub.io"],
-    "source": ["https://github.com/covid19datahub/COVID19"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/COVID19/contributors.html", "https://epiverse-connect.r-universe.dev/articles/COVID19/docs.html", "https://epiverse-connect.r-universe.dev/articles/COVID19/data.html", "https://epiverse-connect.r-universe.dev/articles/COVID19/python.html", "https://epiverse-connect.r-universe.dev/articles/COVID19/r.html"]
-  },
-  {
-    "Package": ["socialmixr"],
-    "logo": {},
-    "website": ["https://epiforecasts.io/socialmixr/"],
-    "source": ["https://github.com/epiforecasts/socialmixr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/socialmixr/socialmixr.html"]
-  },
-  {
-    "Package": ["mstate"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/hputter/mstate"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/mstate/Tutorial.pdf", "https://epiverse-connect.r-universe.dev/articles/mstate/visuals_demo.html"]
-  },
-  {
-    "Package": ["incidence2"],
-    "logo": {},
-    "website": ["https://www.reconverse.org/incidence2/"],
-    "source": ["https://github.com/reconverse/incidence2"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/incidence2/incidence2.html"]
-  },
-  {
-    "Package": ["epidatr"],
-    "logo": {},
-    "website": ["https://cmu-delphi.github.io/epidatr/"],
-    "source": ["https://github.com/cmu-delphi/epidatr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epidatr/signal-discovery.html", "https://epiverse-connect.r-universe.dev/articles/epidatr/epidatr.html", "https://epiverse-connect.r-universe.dev/articles/epidatr/versioned-data.html"]
-  },
-  {
-    "Package": ["EpiDynamics"],
-    "logo": {},
-    "website": [],
-    "source": {},
-    "articles": []
-  },
-  {
-    "Package": ["delphidocs"],
-    "logo": {},
-    "website": ["https://cmu-delphi.github.io/delphidocs"],
-    "source": ["https://github.com/cmu-delphi/delphidocs"],
-    "articles": []
-  },
-  {
-    "Package": ["surveillance"],
-    "logo": {},
-    "website": ["https://surveillance.R-Forge.R-project.org/"],
-    "source": ["https://github.com/cran/surveillance"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/surveillance/glrnb.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/surveillance.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/hhh4_spacetime.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/hhh4.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/monitoringCounts.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/twinSIR.pdf", "https://epiverse-connect.r-universe.dev/articles/surveillance/twinstim.pdf"]
-  },
-  {
-    "Package": ["denguedatahub"],
-    "logo": {},
-    "website": ["https://denguedatahub.netlify.app/"],
-    "source": ["https://github.com/thiyangt/denguedatahub"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiContactTrace"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/stewid/EpiContactTrace"],
-    "articles": []
-  },
-  {
-    "Package": ["outbreaker2"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/reconhub/outbreaker2"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/outbreaker2/introduction.html", "https://epiverse-connect.r-universe.dev/articles/outbreaker2/overview.html", "https://epiverse-connect.r-universe.dev/articles/outbreaker2/Rcpp_API.html", "https://epiverse-connect.r-universe.dev/articles/outbreaker2/customisation.html"]
-  },
-  {
-    "Package": ["dde"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/mrc-ide/dde"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/dde/dde.html"]
-  },
-  {
-    "Package": ["EpiEstim"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/mrc-ide/EpiEstim"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiEstim/alternative_software.html", "https://epiverse-connect.r-universe.dev/articles/EpiEstim/EpiEstim_backimputation.html", "https://epiverse-connect.r-universe.dev/articles/EpiEstim/short_demo.html", "https://epiverse-connect.r-universe.dev/articles/EpiEstim/EpiEstim_aggregated_data.html", "https://epiverse-connect.r-universe.dev/articles/EpiEstim/full_EpiEstim_vignette.html", "https://epiverse-connect.r-universe.dev/articles/EpiEstim/MV_EpiEstim_vignette.html"]
-  },
-  {
-    "Package": ["epidm"],
-    "logo": {},
-    "website": ["https://alexbhatt.github.io/epidm/"],
-    "source": ["https://github.com/alexbhatt/epidm"],
-    "articles": []
-  },
-  {
-    "Package": ["incidence"],
-    "logo": {},
-    "website": ["https://www.repidemicsconsortium.org/incidence/"],
-    "source": ["https://github.com/reconhub/incidence"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/incidence/conversions.html", "https://epiverse-connect.r-universe.dev/articles/incidence/customize_plot.html", "https://epiverse-connect.r-universe.dev/articles/incidence/incidence_class.html", "https://epiverse-connect.r-universe.dev/articles/incidence/incidence_fit_class.html", "https://epiverse-connect.r-universe.dev/articles/incidence/overview.html"]
-  },
-  {
-    "Package": ["excessmort"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/rafalab/excessmort"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/excessmort/excessmort.html"]
-  },
-  {
-    "Package": ["malariaAtlas"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/malaria-atlas-project/malariaAtlas"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/malariaAtlas/overview.html"]
-  },
-  {
-    "Package": ["dbparser"],
-    "logo": ["https://github.com/ropensci/dbparser/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://docs.ropensci.org/dbparser/"],
-    "source": ["https://github.com/ropensci/dbparser"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/dbparser/dbparser.html"]
-  },
-  {
-    "Package": ["odin"],
-    "logo": ["https://github.com/mrc-ide/odin/raw/HEAD/man/figures/logo.png"],
-    "website": [null],
-    "source": ["https://github.com/mrc-ide/odin"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/odin/debugging.html", "https://epiverse-connect.r-universe.dev/articles/odin/guide.html", "https://epiverse-connect.r-universe.dev/articles/odin/odin.html", "https://epiverse-connect.r-universe.dev/articles/odin/discrete.html", "https://epiverse-connect.r-universe.dev/articles/odin/functions.html"]
-  },
-  {
-    "Package": ["Bernadette"],
-    "logo": {},
-    "website": [],
-    "source": {},
-    "articles": []
-  },
-  {
-    "Package": ["o2geosocial"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/alxsrobert/o2geosocial"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/o2geosocial/o2geosocial.html"]
-  },
-  {
-    "Package": ["shinySIR"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/SineadMorris/shinySIR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/shinySIR/Vignette.html"]
-  },
-  {
-    "Package": ["epiworldRShiny"],
-    "logo": {},
-    "website": ["https://uofuepibio.github.io/epiworldRShiny/"],
-    "source": ["https://github.com/UofUEpiBio/epiworldRShiny"],
-    "articles": []
-  },
-  {
-    "Package": ["cmprsk"],
-    "logo": {},
-    "website": ["https://www.R-project.org"],
-    "source": ["https://github.com/cran/cmprsk"],
-    "articles": []
-  },
-  {
-    "Package": ["covid19dbcand"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/MohammedFCIS/covid19dbcand"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/covid19dbcand/covid19dbcand.html"]
-  },
-  {
-    "Package": ["episensr"],
-    "logo": ["https://github.com/dhaine/episensr/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://dhaine.github.io/episensr/"],
-    "source": ["https://github.com/dhaine/episensr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/episensr/d_other_sens.html", "https://epiverse-connect.r-universe.dev/articles/episensr/c_multiple_bias.html", "https://epiverse-connect.r-universe.dev/articles/episensr/b_probabilistic.html", "https://epiverse-connect.r-universe.dev/articles/episensr/episensr.html"]
-  },
-  {
-    "Package": ["EpiForsk"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/Laksafoss/EpiForsk"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiForsk/Contributing.html", "https://epiverse-connect.r-universe.dev/articles/EpiForsk/andh_forest_plot.html", "https://epiverse-connect.r-universe.dev/articles/EpiForsk/Writing_functions.html"]
-  },
-  {
-    "Package": ["nbTransmission"],
-    "logo": {},
-    "website": ["https://sarahleavitt.github.io/nbTransmission/"],
-    "source": ["https://github.com/sarahleavitt/nbTransmission"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/nbTransmission/nbTransmission-vignette.html"]
-  },
-  {
-    "Package": ["DSAIDE"],
-    "logo": ["https://github.com/ahgroup/DSAIDE/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://ahgroup.github.io/DSAIDE/"],
-    "source": ["https://github.com/ahgroup/DSAIDE"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/DSAIDE/DSAIDE.html"]
-  },
-  {
-    "Package": ["epinet"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/epinet"],
-    "articles": []
-  },
-  {
-    "Package": ["deSolve"],
-    "logo": {},
-    "website": ["http://desolve.r-forge.r-project.org/"],
-    "source": ["https://github.com/cran/deSolve"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/deSolve/deSolve.pdf", "https://epiverse-connect.r-universe.dev/articles/deSolve/compiledCode.pdf"]
-  },
-  {
-    "Package": ["epiphy"],
-    "logo": ["https://github.com/chgigot/epiphy/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://chgigot.github.io/epiphy/"],
-    "source": ["https://github.com/chgigot/epiphy"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiphy/epiphy.html", "https://epiverse-connect.r-universe.dev/articles/epiphy/defs-and-eqns.html"]
-  },
-  {
-    "Package": ["epitweetr"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/EU-ECDC/epitweetr"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiStats"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/EpiStats"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiStats/EpiStats.html"]
-  },
-  {
-    "Package": ["epiCleanr"],
-    "logo": ["https://github.com/truenomad/epiCleanr/raw/HEAD/man/figures/logo.png"],
-    "website": ["https://truenomad.github.io/epiCleanr/"],
-    "source": ["https://github.com/truenomad/epiCleanr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiCleanr/using_epicleanr.html"]
-  },
-  {
-    "Package": ["covid19br"],
-    "logo": {},
-    "website": ["https://fndemarqui.github.io/covid19br/"],
-    "source": ["https://github.com/fndemarqui/covid19br"],
-    "articles": []
-  },
-  {
-    "Package": ["TransPhylo"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/xavierdidelot/TransPhylo"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/TransPhylo/infer.html", "https://epiverse-connect.r-universe.dev/articles/TransPhylo/TransPhylo.html", "https://epiverse-connect.r-universe.dev/articles/TransPhylo/simulate.html", "https://epiverse-connect.r-universe.dev/articles/TransPhylo/multitree.html"]
-  },
-  {
-    "Package": ["epiflows"],
-    "logo": {},
-    "website": ["https://www.repidemicsconsortium.org/epiflows/"],
-    "source": ["https://github.com/reconhub/epiflows"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epiflows/introduction.html", "https://epiverse-connect.r-universe.dev/articles/epiflows/epiflows-class.html"]
-  },
-  {
-    "Package": ["R0"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/tobadia/R0"],
-    "articles": []
-  },
-  {
-    "Package": ["modelSSE"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/modelSSE"],
-    "articles": []
-  },
-  {
-    "Package": ["apisensr"],
-    "logo": ["https://github.com/dhaine/apisensr/raw/HEAD/man/figures/logo.png"],
-    "website": [null],
-    "source": ["https://github.com/dhaine/apisensr"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/apisensr/apisensr.html"]
-  },
-  {
-    "Package": ["coarseDataTools"],
-    "logo": {},
-    "website": ["https://cran.r-project.org/package=coarseDataTools"],
-    "source": ["https://github.com/nickreich/coarseDataTools"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/coarseDataTools/CFR_vignette.html"]
-  },
-  {
-    "Package": ["mem"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/lozalojo/mem"],
-    "articles": []
-  },
-  {
-    "Package": ["memapp"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/lozalojo/memapp"],
-    "articles": []
-  },
-  {
-    "Package": ["argo"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/argo"],
-    "articles": []
-  },
-  {
-    "Package": ["trending"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/reconverse/trending"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/trending/Introduction.html", "https://epiverse-connect.r-universe.dev/articles/trending/prediction_intervals.html"]
-  },
-  {
-    "Package": ["covid19sf"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/RamiKrispin/covid19sf"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/covid19sf/data_refresh.html", "https://epiverse-connect.r-universe.dev/articles/covid19sf/intro.html"]
-  },
-  {
-    "Package": ["covid19italy"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/RamiKrispin/covid19italy"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/covid19italy/dashboard.html", "https://epiverse-connect.r-universe.dev/articles/covid19italy/intro.html"]
-  },
-  {
-    "Package": ["epicasting"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/epicasting"],
-    "articles": []
-  },
-  {
-    "Package": ["coronavirus"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/RamiKrispin/coronavirus"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/coronavirus/covid19R.html"]
-  },
-  {
-    "Package": ["SpatialEpi"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/rudeboybert/SpatialEpi"],
-    "articles": []
-  },
-  {
-    "Package": ["epimdr2"],
-    "logo": {},
-    "website": ["<https://github.com/objornstad/epimdr2>"],
-    "source": ["https://github.com/objornstad/epimdr2"],
-    "articles": []
-  },
-  {
-    "Package": ["riskCommunicator"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/jgrembi/riskCommunicator"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/riskCommunicator/Vignette_newbieRusers.html", "https://epiverse-connect.r-universe.dev/articles/riskCommunicator/Vignette_manuscript.html"]
-  },
-  {
-    "Package": ["epitrix"],
-    "logo": {},
-    "website": ["http://www.repidemicsconsortium.org/epitrix/"],
-    "source": ["https://github.com/reconhub/epitrix"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epitrix/estimate_incubation.html", "https://epiverse-connect.r-universe.dev/articles/epitrix/epitrix.html"]
-  },
-  {
-    "Package": ["trendeval"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/reconverse/trendeval"],
-    "articles": []
-  },
-  {
-    "Package": ["outbreaks"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/reconhub/outbreaks"],
-    "articles": []
-  },
-  {
-    "Package": ["covid19.analytics"],
-    "logo": {},
-    "website": ["https://mponce0.github.io/covid19.analytics/"],
-    "source": ["https://github.com/mponce0/covid19.analytics"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/covid19.analytics/covid19.analytics.html"]
-  },
-  {
-    "Package": ["covid19us"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/aedobbyn/covid19us"],
-    "articles": []
-  },
-  {
-    "Package": ["epiDisplay"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/epiDisplay"],
-    "articles": []
-  },
-  {
-    "Package": ["etm"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/mclements/etm"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/etm/etmCIF_tutorial.pdf"]
-  },
-  {
-    "Package": ["EpiCurve"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/IamKDO/EpiCurve"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiCurve/EpiCurve.html"]
-  },
-  {
-    "Package": ["inctools"],
-    "logo": {},
-    "website": ["https://github.sacema.org/inctools/index.html"],
-    "source": ["https://github.com/SACEMA/inctools"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/inctools/EstimatingIncidence.html", "https://epiverse-connect.r-universe.dev/articles/inctools/Introduction.html", "https://epiverse-connect.r-universe.dev/articles/inctools/SurveyDesign.html", "https://epiverse-connect.r-universe.dev/articles/inctools/TestCalibration.html"]
-  },
-  {
-    "Package": ["powerSurvEpi"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/powerSurvEpi"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiReport"],
-    "logo": {},
-    "website": ["https://www.ecdc.europa.eu/en/annual-epidemiological-reports"],
-    "source": ["https://github.com/EU-ECDC/EpiReport"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiReport/EpiReport_Vignette.html"]
-  },
-  {
-    "Package": ["covid19swiss"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/Covid19R/covid19swiss"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/covid19swiss/intro_covid19swiss.html", "https://epiverse-connect.r-universe.dev/articles/covid19swiss/update_the_data.html"]
-  },
-  {
-    "Package": ["earlyR"],
-    "logo": {},
-    "website": ["https://www.repidemicsconsortium.org/earlyR/"],
-    "source": ["https://github.com/reconhub/earlyR"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/earlyR/earlyR.html"]
-  },
-  {
-    "Package": ["EpiILM"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/waleedalmutiry/EpiILM"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiILM/Predict.pdf"]
-  },
-  {
-    "Package": ["corona"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/corona"],
-    "articles": []
-  },
-  {
-    "Package": ["CovidMutations"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/MSQ-123/CovidMutations"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/CovidMutations/vignette.html"]
-  },
-  {
-    "Package": ["RSurveillance"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/roStats/RSurveillance"],
-    "articles": []
-  },
-  {
-    "Package": ["bets.covid19"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/qingyuanzhao/bets.covid19"],
-    "articles": []
-  },
-  {
-    "Package": ["covid19france"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/Covid19R/covid19france"],
-    "articles": []
-  },
-  {
-    "Package": ["epitools"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/epitools"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiILMCT"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/waleedalmutiry/EpiILMCT"],
-    "articles": []
-  },
-  {
-    "Package": ["tsiR"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/adbecker/tsiR"],
-    "articles": []
-  },
-  {
-    "Package": ["endtoend"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/endtoend"],
-    "articles": []
-  },
-  {
-    "Package": ["colmozzie"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/thiyangt/colmozzie"],
-    "articles": []
-  },
-  {
-    "Package": ["epibasix"],
-    "logo": {},
-    "website": [],
-    "source": ["https://github.com/cran/epibasix"],
-    "articles": []
-  },
-  {
-    "Package": ["EpiSignalDetection"],
-    "logo": {},
-    "website": ["http://atlas.ecdc.europa.eu/public/index.aspx"],
-    "source": ["https://github.com/EU-ECDC/EpiSignalDetection"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/EpiSignalDetection/EpiSignalDetection_Vignette.html"]
-  },
-  {
-    "Package": ["epitab"],
-    "logo": {},
-    "website": [null],
-    "source": ["https://github.com/stulacy/epitab"],
-    "articles": ["https://epiverse-connect.r-universe.dev/articles/epitab/user_guide.html"]
-  }
+    {
+        "package": "AMR",
+        "title": "Antimicrobial Resistance Data Analysis",
+        "description": "Functions to simplify and standardise antimicrobial\nresistance (AMR) data analysis and to work with microbial and\nantimicrobial properties by using evidence-based methods, as\ndescribed in <doi:10.18637/jss.v104.i03>.",
+        "logo": "https://github.com/msberends/AMR/raw/HEAD/logo.svg",
+        "website": "https://amr-for-r.org",
+        "source": "https://github.com/msberends/AMR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/AMR/AMR_for_Python.html",
+            "https://epiverse-connect.r-universe.dev/articles/AMR/welcome_to_AMR.html"
+        ]
+    },
+    {
+        "package": "sivirep",
+        "title": "Data Wrangling and Automated Reports from 'SIVIGILA' Source",
+        "description": "Data wrangling, pre-processing, and generating automated\nreports from Colombia's epidemiological surveillance system,\n'SIVIGILA' <https://portalsivigila.ins.gov.co/>. It provides a\ncustomizable R Markdown template for analysis and automatic\ngeneration of epidemiological reports that can be adapted to\nlocal, regional, and national contexts. This tool offers a\nstandardized and reproducible workflow that helps to reduce\nmanual labor and potential errors in report generation,\nimproving their efficiency and consistency.",
+        "logo": "https://github.com/epiverse-trace/sivirep/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/sivirep/",
+        "source": "https://github.com/epiverse-trace/sivirep",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/sivirep/sivirep.html"
+        ]
+    },
+    {
+        "package": "cholera",
+        "title": "Amend, Augment and Aid Analysis of John Snow's Cholera Map",
+        "description": "Amends errors, augments data and aids analysis of John\nSnow's map of the 1854 London cholera outbreak.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/lindbrook/cholera",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/cholera/unstacking.bars.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/duplicate.missing.cases.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/kernel.density.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/parallelization.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/roads.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/time.series.html",
+            "https://epiverse-connect.r-universe.dev/articles/cholera/tiles.polygons.html"
+        ]
+    },
+    {
+        "package": "epiworldR",
+        "title": "Fast Agent-Based Epi Models",
+        "description": "A flexible framework for Agent-Based Models (ABM), the\n'epiworldR' package provides methods for prototyping disease\noutbreaks and transmission models using a 'C++' backend, making\nit very fast. It supports multiple epidemiological models,\nincluding the Susceptible-Infected-Susceptible (SIS),\nSusceptible-Infected-Removed (SIR),\nSusceptible-Exposed-Infected-Removed (SEIR), and others,\ninvolving arbitrary mitigation policies and multiple-disease\nmodels. Users can specify infectiousness/susceptibility rates\nas a function of agents' features, providing great complexity\nfor the model dynamics. Furthermore, 'epiworldR' is ideal for\nsimulation studies featuring large populations.",
+        "logo": null,
+        "website": "https://uofuepibio.github.io/epiworldR/",
+        "source": "https://github.com/UofUEpiBio/epiworldR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/getting-started.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/implementation.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/advanced-modeling.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/likelihood-free-mcmc.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/mixing.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiworldR/run-multiple.html"
+        ]
+    },
+    {
+        "package": "socialmixr",
+        "title": "Social Mixing Matrices for Infectious Disease Modelling",
+        "description": "Provides methods for sampling contact matrices from diary\ndata for use in infectious disease modelling, as discussed in\nMossong et al. (2008) <doi:10.1371/journal.pmed.0050074>.",
+        "logo": null,
+        "website": "https://epiforecasts.io/socialmixr/",
+        "source": "https://github.com/epiforecasts/socialmixr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/socialmixr/socialmixr.html"
+        ]
+    },
+    {
+        "package": "ATQ",
+        "title": "Alert Time Quality - Evaluating Timely Epidemic Metrics",
+        "description": "Provides tools for evaluating timely epidemic detection\nmodels within school absenteeism-based surveillance systems.\nIntroduces the concept of alert time quality as an evaluation\nmetric. Includes functions to simulate populations, epidemics,\nand alert metrics associated with epidemic spread using\npopulation census data. The methods are based on research\npublished in Vanderkruk et al. (2023)\n<doi:10.1186/s12889-023-15747-z> and Ward et al. (2019)\n<doi:10.1186/s12889-019-7521-7>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/vjoshy/ATQ_Surveillance_Package",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/ATQ/ATQ_Guide.html"
+        ]
+    },
+    {
+        "package": "EpiModel",
+        "title": "Mathematical Modeling of Infectious Disease Dynamics",
+        "description": "Tools for simulating mathematical models of infectious\ndisease dynamics. Epidemic model classes include deterministic\ncompartmental models, stochastic individual-contact models, and\nstochastic network models. Network models use the robust\nstatistical methods of exponential-family random graph models\n(ERGMs) from the Statnet suite of software packages in R.\nStandard templates for epidemic modeling include SI, SIR, and\nSIS disease types. EpiModel features an API for extending these\ntemplates to address novel scientific research aims. Full\nmethods for EpiModel are detailed in Jenness et al. (2018,\n<doi:10.18637/jss.v084.i08>).",
+        "logo": null,
+        "website": "https://www.epimodel.org/",
+        "source": "https://github.com/EpiModel/EpiModel",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiModel/Intro.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiModel/attributes-and-summary-statistics.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiModel/model-parameters.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiModel/network-objects.html"
+        ]
+    },
+    {
+        "package": "epiCo",
+        "title": "Statistical and Viz Tools for Vector-Borne Diseases in Colombia",
+        "description": "Provides statistical and visualization tools for the\nanalysis of demographic indicators, and spatio-temporal\nbehavior and characterization of outbreaks of vector-borne\ndiseases (VBDs) in Colombia. It implements travel times\nestimated in Bravo-Vega C., Santos-Vega M., & Cordovez J.M.\n(2022), and the endemic channel method (Bortman, M.  (1999)\n<https://iris.paho.org/handle/10665.2/8562>).",
+        "logo": "https://github.com/epiverse-trace/epiCo/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/epiCo/",
+        "source": "https://github.com/epiverse-trace/epiCo",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiCo/demographic_vignette.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiCo/endemic_channel.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiCo/spatiotemporal_vignette.html"
+        ]
+    },
+    {
+        "package": "trendeval",
+        "title": "Evaluate Trending Models",
+        "description": "Provides a coherent interface for evaluating models fit\nwith the trending package.  This package is part of the RECON\n(<https://www.repidemicsconsortium.org/>) toolkit for outbreak\nanalysis.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/reconverse/trendeval",
+        "articles": []
+    },
+    {
+        "package": "linelist",
+        "title": "Tagging and Validating Epidemiological Data",
+        "description": "Provides tools to help storing and handling case line list\ndata. The 'linelist' class adds a tagging system to classical\n'data.frame' objects to identify key epidemiological data such\nas dates of symptom onset, epidemiological case definition,\nage, gender or disease outcome. Once tagged, these variables\ncan be seamlessly used in downstream analyses, making data\npipelines more robust and reliable.",
+        "logo": "https://github.com/epiverse-trace/linelist/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/linelist/",
+        "source": "https://github.com/epiverse-trace/linelist",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/linelist/linelist.html",
+            "https://epiverse-connect.r-universe.dev/articles/linelist/compat-dplyr.html",
+            "https://epiverse-connect.r-universe.dev/articles/linelist/design-principles.html",
+            "https://epiverse-connect.r-universe.dev/articles/linelist/software-permissions.html"
+        ]
+    },
+    {
+        "package": "epiworldRShiny",
+        "title": "A 'shiny' Wrapper of the R Package 'epiworldR'",
+        "description": "R 'shiny' web apps for epidemiological Agent-Based Models.\nIt provides a user-friendly interface to the Agent-Based\nModeling (ABM) R package 'epiworldR' (Meyer et al., 2023)\n<DOI:10.21105/joss.05781>. Some of the main features of the\npackage include the Susceptible-Infected-Susceptible (SIS),\nSusceptible-Infected-Recovered (SIR), and\nSusceptible-Exposed-Infected-Recovered (SEIR) models.\n'epiworldRShiny' provides a web-based user interface for\nrunning various epidemiological ABMs, simulating interventions,\nand visualizing results interactively.",
+        "logo": null,
+        "website": "https://uofuepibio.github.io/epiworldRShiny/",
+        "source": "https://github.com/UofUEpiBio/epiworldRShiny",
+        "articles": []
+    },
+    {
+        "package": "episensr",
+        "title": "Basic Sensitivity Analysis of Epidemiological Results",
+        "description": "Basic sensitivity analysis of the observed relative risks\nadjusting for unmeasured confounding and misclassification of\nthe exposure/outcome, or both. It follows the bias analysis\nmethods and examples from the book by Lash T.L, Fox M.P, and\nFink A.K.  \"Applying Quantitative Bias Analysis to\nEpidemiologic Data\", ('Springer', 2021).",
+        "logo": "https://github.com/dhaine/episensr/raw/HEAD/man/figures/logo.png",
+        "website": "https://dhaine.github.io/episensr/",
+        "source": "https://github.com/dhaine/episensr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/episensr/d_other_sens.html",
+            "https://epiverse-connect.r-universe.dev/articles/episensr/c_multiple_bias.html",
+            "https://epiverse-connect.r-universe.dev/articles/episensr/b_probabilistic.html",
+            "https://epiverse-connect.r-universe.dev/articles/episensr/episensr.html"
+        ]
+    },
+    {
+        "package": "epicontacts",
+        "title": "Handling, Visualisation and Analysis of Epidemiological Contacts",
+        "description": "A collection of tools for representing epidemiological\ncontact data, composed of case line lists and contacts between\ncases. Also contains procedures for data handling, interactive\ngraphics, and statistics.",
+        "logo": null,
+        "website": "https://www.repidemicsconsortium.org/epicontacts/",
+        "source": "https://github.com/reconhub/epicontacts",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epicontacts/epicontacts_class.html",
+            "https://epiverse-connect.r-universe.dev/articles/epicontacts/epicontacts.html"
+        ]
+    },
+    {
+        "package": "pomp",
+        "title": "Statistical Inference for Partially Observed Markov Processes",
+        "description": "Tools for data analysis with partially observed Markov\nprocess (POMP) models (also known as stochastic dynamical\nsystems, hidden Markov models, and nonlinear, non-Gaussian,\nstate-space models).  The package provides facilities for\nimplementing POMP models, simulating them, and fitting them to\ntime series data by a variety of frequentist and Bayesian\nmethods.  It is also a versatile platform for implementation of\ninference methods for general POMP models.",
+        "logo": null,
+        "website": "https://kingaa.github.io/pomp/",
+        "source": "https://github.com/kingaa/pomp",
+        "articles": []
+    },
+    {
+        "package": "SimInf",
+        "title": "A Framework for Data-Driven Stochastic Disease Spread\nSimulations",
+        "description": "Provides an efficient and very flexible framework to\nconduct data-driven epidemiological modeling in realistic large\nscale disease spread simulations. The framework integrates\ninfection dynamics in subpopulations as continuous-time Markov\nchains using the Gillespie stochastic simulation algorithm and\nincorporates available data such as births, deaths and\nmovements as scheduled events at predefined time-points. Using\nC code for the numerical solvers and 'OpenMP' (if available) to\ndivide work over multiple processors ensures high performance\nwhen simulating a sample outcome. One of our design goals was\nto make the package extendable and enable usage of the\nnumerical solvers from other R extension packages in order to\nfacilitate complex epidemiological research. The package\ncontains template models and can be extended with user-defined\nmodels. For more details see the paper by Widgren, Bauer,\nEriksson and Engblom (2019) <doi:10.18637/jss.v091.i12>. The\npackage also provides functionality to fit models to time\nseries data using the Approximate Bayesian Computation\nSequential Monte Carlo ('ABC-SMC') algorithm of Toni and others\n(2009) <doi:10.1098/rsif.2008.0172>.",
+        "logo": null,
+        "website": "http://stewid.github.io/SimInf/",
+        "source": "https://github.com/stewid/SimInf",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/SimInf/post-process-data.html",
+            "https://epiverse-connect.r-universe.dev/articles/SimInf/scheduled-events.html",
+            "https://epiverse-connect.r-universe.dev/articles/SimInf/SimInf.pdf"
+        ]
+    },
+    {
+        "package": "simulist",
+        "title": "Simulate Disease Outbreak Line List and Contacts Data",
+        "description": "Tools to simulate realistic raw case data for an epidemic\nin the form of line lists and contacts using a branching\nprocess. Simulated outbreaks are parameterised with\nepidemiological parameters and can have age-structured\npopulations, age-stratified hospitalisation and death risk and\ntime-varying case fatality risk.",
+        "logo": "https://github.com/epiverse-trace/simulist/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/simulist/",
+        "source": "https://github.com/epiverse-trace/simulist",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/simulist/age-strat-risks.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/age-struct-pop.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/design-principles.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/simulist.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/reporting-delays-truncation.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/time-varying-cfr.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/vis-linelist.html",
+            "https://epiverse-connect.r-universe.dev/articles/simulist/wrangling-linelist.html"
+        ]
+    },
+    {
+        "package": "etm",
+        "title": "Empirical Transition Matrix",
+        "description": "The etm (empirical transition matrix) package permits to\nestimate the matrix of transition probabilities for any\ntime-inhomogeneous multi-state model with finite state space\nusing the Aalen-Johansen estimator. Functions for data\npreparation and for displaying are also included (Allignol et\nal., 2011 <doi:10.18637/jss.v038.i04>). Functionals of the\nAalen-Johansen estimator, e.g., excess length-of-stay in an\nintermediate state, can also be computed (Allignol et al. 2011\n<doi:10.1007/s00180-010-0200-x>).",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/mclements/etm",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/etm/etmCIF_tutorial.pdf"
+        ]
+    },
+    {
+        "package": "coarseDataTools",
+        "title": "Analysis of Coarsely Observed Data",
+        "description": "Functions to analyze coarse data. Specifically, it\ncontains functions to (1) fit parametric accelerated failure\ntime models to interval-censored survival time data, and (2)\nestimate the case-fatality ratio in scenarios with\nunder-reporting. This package's development was motivated by\napplications to infectious disease: in particular, problems\nwith estimating the incubation period and the case fatality\nratio of a given disease.  Sample data files are included in\nthe package. See Reich et al. (2009) <doi:10.1002/sim.3659>,\nReich et al. (2012) <doi:10.1111/j.1541-0420.2011.01709.x>, and\nLessler et al. (2009) <doi:10.1016/S1473-3099(09)70069-6>.",
+        "logo": null,
+        "website": "http://nickreich.github.io/coarseDataTools/",
+        "source": "https://github.com/nickreich/coarseDataTools",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/coarseDataTools/CFR_vignette.html"
+        ]
+    },
+    {
+        "package": "ggsurveillance",
+        "title": "Tools for Outbreak Investigation/Infectious Disease Surveillance",
+        "description": "Create epicurves or epigantt charts in 'ggplot2'. Prepare\ndata for visualisation or other reporting for infectious\ndisease surveillance and outbreak investigation. Includes tidy\nfunctions to solve date based transformations for common\nreporting tasks, like (A) seasonal date alignment for\nrespiratory disease surveillance, (B) date-based case binning\nbased on specified time intervals like isoweek, epiweek, month\nand more, (C) automated detection and marking of the new year\nbased on the date/datetime axis of the 'ggplot2'. An\nintroduction on how to use epicurves can be found on the US CDC\nwebsite (2012,\n<https://www.cdc.gov/training/quicklearns/epimode/index.html>).",
+        "logo": "https://github.com/biostats-dev/ggsurveillance/raw/HEAD/man/figures/logo.svg",
+        "website": "https://ggsurveillance.biostats.dev",
+        "source": "https://github.com/biostats-dev/ggsurveillance",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/ggsurveillance/Epicurves_with_ggsurveillance.html",
+            "https://epiverse-connect.r-universe.dev/articles/ggsurveillance/Epigantt_with_ggsurveillance.html",
+            "https://epiverse-connect.r-universe.dev/articles/ggsurveillance/align_dates_seasonal.html"
+        ]
+    },
+    {
+        "package": "aedseo",
+        "title": "Automated and Early Detection of Seasonal Epidemic Onset and\nBurden Levels",
+        "description": "A powerful tool for automating the early detection of\nseasonal epidemic onsets in time series data. It offers the\nability to estimate growth rates across consecutive time\nintervals, calculate the sum of cases (SoC) within those\nintervals, and estimate seasonal onsets within user defined\nseasons. With use of a disease-specific threshold it also\noffers the possibility to estimate seasonal onset of epidemics.\nAdditionally it offers the ability to estimate burden levels\nfor seasons based on historical data. It is aimed towards\nepidemiologists, public health professionals, and researchers\nseeking to identify and respond to seasonal epidemics in a\ntimely fashion.",
+        "logo": "https://github.com/ssi-dk/aedseo/raw/HEAD/man/figures/logo.png",
+        "website": "https://ssi-dk.github.io/aedseo/",
+        "source": "https://github.com/ssi-dk/aedseo",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/aedseo/aedseo.html",
+            "https://epiverse-connect.r-universe.dev/articles/aedseo/burden_levels.html",
+            "https://epiverse-connect.r-universe.dev/articles/aedseo/seasonal_onset.html",
+            "https://epiverse-connect.r-universe.dev/articles/aedseo/generate_seasonal_wave.html"
+        ]
+    },
+    {
+        "package": "EpiNow2",
+        "title": "Estimate Real-Time Case Counts and Time-Varying Epidemiological\nParameters",
+        "description": "Estimates the time-varying reproduction number, rate of\nspread, and doubling time using a range of open-source tools\n(Abbott et al. (2020) <doi:10.12688/wellcomeopenres.16006.1>),\nand current best practices (Gostic et al. (2020)\n<doi:10.1101/2020.06.18.20134858>).  It aims to help users\navoid some of the limitations of naive implementations in a\nframework that is informed by community feedback and is\nactively supported.",
+        "logo": "https://github.com/epiforecasts/EpiNow2/raw/HEAD/man/figures/logo.png",
+        "website": "https://epiforecasts.io/EpiNow2/",
+        "source": "https://github.com/epiforecasts/EpiNow2",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/case-studies.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections_options.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/forecasting_multiple_data_streams.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/gaussian_process_implementation_details.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/EpiNow2.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_secondary.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_truncation.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/epinow.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiNow2/estimate_infections_workflow.html"
+        ]
+    },
+    {
+        "package": "excessmort",
+        "title": "Excess Mortality",
+        "description": "Implementation of method for estimating excess mortality\nand other health related outcomes from weekly or daily count\ndata described in Acosta and Irizarry (2021) \"A Flexible\nStatistical Framework for Estimating Excess Mortality\".",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/rafalab/excessmort",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/excessmort/excessmort.html"
+        ]
+    },
+    {
+        "package": "popEpi",
+        "title": "Functions for Epidemiological Analysis using Population Data",
+        "description": "Enables computation of epidemiological statistics,\nincluding those where counts or mortality rates of the\nreference population are used.  Currently supported: excess\nhazard models (Dickman, Sloggett, Hills, and Hakulinen (2012)\n<doi:10.1002/sim.1597>), rates, mean survival times,\nrelative/net survival (in particular the Ederer II (Ederer and\nHeise (1959)) and Pohar Perme (Pohar Perme, Stare, and Esteve\n(2012) <doi:10.1111/j.1541-0420.2011.01640.x>) estimators), and\nstandardized incidence and mortality ratios, all of which can\nbe easily adjusted for by covariates such as age. Fast\nsplitting and aggregation of 'Lexis' objects (from package\n'Epi') and other computations achieved using 'data.table'.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/FinnishCancerRegistry/popEpi",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/popEpi/sir.html",
+            "https://epiverse-connect.r-universe.dev/articles/popEpi/survtab_examples.html"
+        ]
+    },
+    {
+        "package": "cleanepi",
+        "title": "Clean and Standardize Epidemiological Data",
+        "description": "Cleaning and standardizing tabular data package, tailored\nspecifically for curating epidemiological data. It streamlines\nvarious data cleaning tasks that are typically expected when\nworking with datasets in epidemiology. It returns the processed\ndata in the same format, and generates a comprehensive report\ndetailing the outcomes of each cleaning task.",
+        "logo": "https://github.com/epiverse-trace/cleanepi/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/cleanepi/",
+        "source": "https://github.com/epiverse-trace/cleanepi",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/cleanepi/cleanepi.html",
+            "https://epiverse-connect.r-universe.dev/articles/cleanepi/design_principle.html"
+        ]
+    },
+    {
+        "package": "epidatr",
+        "title": "Client for Delphi's 'Epidata' API",
+        "description": "The Delphi 'Epidata' API provides real-time access to\nepidemiological surveillance data for influenza, 'COVID-19',\nand other diseases for the USA at various geographical\nresolutions, both from official government sources such as the\nCenter for Disease Control (CDC) and Google Trends and private\npartners such as Facebook and Change 'Healthcare'. It is built\nand maintained by the Carnegie Mellon University Delphi\nresearch group. To cite this API: David C. Farrow, Logan C.\nBrooks, Aaron 'Rumack', Ryan J. 'Tibshirani', 'Roni'\n'Rosenfeld' (2015). Delphi 'Epidata' API.\n<https://github.com/cmu-delphi/delphi-epidata>.",
+        "logo": null,
+        "website": "https://cmu-delphi.github.io/epidatr/",
+        "source": "https://github.com/cmu-delphi/epidatr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epidatr/signal-discovery.html",
+            "https://epiverse-connect.r-universe.dev/articles/epidatr/epidatr.html",
+            "https://epiverse-connect.r-universe.dev/articles/epidatr/versioned-data.html"
+        ]
+    },
+    {
+        "package": "nbTransmission",
+        "title": "Naive Bayes Transmission Analysis",
+        "description": "Estimates the relative transmission probabilities between\ncases in an infectious disease outbreak or cluster using naive\nBayes. Included are various functions to use these\nprobabilities to estimate transmission parameters such as the\ngeneration/serial interval and reproductive number as well as\nfinding the contribution of covariates to the probabilities and\nvisualizing results. The ideal use is for an infectious disease\ndataset with metadata on the majority of cases but more\ninformative data such as contact tracing or pathogen whole\ngenome sequencing on only a subset of cases. For a detailed\ndescription of the methods see Leavitt et al. (2020)\n<doi:10.1093/ije/dyaa031>.",
+        "logo": null,
+        "website": "https://sarahleavitt.github.io/nbTransmission/",
+        "source": "https://github.com/sarahleavitt/nbTransmission",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/nbTransmission/nbTransmission-vignette.html"
+        ]
+    },
+    {
+        "package": "epichains",
+        "title": "Simulating and Analysing Transmission Chain Statistics Using\nBranching Process Models",
+        "description": "Provides methods to simulate and analyse the size and\nlength of branching processes with an arbitrary offspring\ndistribution. These can be used, for example, to analyse the\ndistribution of chain sizes or length of infectious disease\noutbreaks, as discussed in Farrington et al. (2003)\n<doi:10.1093/biostatistics/4.2.279>.",
+        "logo": "https://github.com/epiverse-trace/epichains/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/epichains/",
+        "source": "https://github.com/epiverse-trace/epichains",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epichains/design-principles.html",
+            "https://epiverse-connect.r-universe.dev/articles/epichains/epichains.html",
+            "https://epiverse-connect.r-universe.dev/articles/epichains/branching_process_literature.html",
+            "https://epiverse-connect.r-universe.dev/articles/epichains/interventions.html",
+            "https://epiverse-connect.r-universe.dev/articles/epichains/projecting_incidence.html",
+            "https://epiverse-connect.r-universe.dev/articles/epichains/theoretical_background.html"
+        ]
+    },
+    {
+        "package": "EpiForsk",
+        "title": "Code Sharing at the Department of Epidemiology Research at\nStatens Serum Institut",
+        "description": "This is a collection of assorted functions and examples\ncollected from various projects. Currently we have\nfunctionalities for simplifying overlapping time intervals,\nCharlson comorbidity score constructors for Danish data,\ngetting frequency for multiple variables, getting standardized\noutput from logistic and log-linear regressions, sibling design\nlinear regression functionalities a method for calculating the\nconfidence intervals for functions of parameters from a GLM,\nBayes equivalent for hypothesis testing with asymptotic Bayes\nfactor, and several help functions for generalized random\nforest analysis using 'grf'.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/Laksafoss/EpiForsk",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiForsk/Contributing.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiForsk/andh_forest_plot.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiForsk/Writing_functions.html"
+        ]
+    },
+    {
+        "package": "dataquieR",
+        "title": "Data Quality in Epidemiological Research",
+        "description": "Data quality assessments guided by a 'data quality\nframework introduced by Schmidt and colleagues, 2021'\n<doi:10.1186/s12874-021-01252-7> target the data quality\ndimensions integrity, completeness, consistency, and accuracy.\nThe scope of applicable functions rests on the availability of\nextensive metadata which can be provided in spreadsheet tables.\nEither standardized (e.g. as 'html5' reports) or individually\ntailored reports can be generated. For an introduction into the\nspecification of corresponding metadata, please refer to the\n'package website'\n<https://dataquality.qihs.uni-greifswald.de/VIN_Annotation_of_Metadata.html>.",
+        "logo": null,
+        "website": "https://dataquality.qihs.uni-greifswald.de/",
+        "source": "https://github.com/cran/dataquieR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/dataquieR/DQ-report-example.html"
+        ]
+    },
+    {
+        "package": "Bernadette",
+        "title": null,
+        "description": null,
+        "logo": null,
+        "website": null,
+        "source": null,
+        "articles": []
+    },
+    {
+        "package": "cfr",
+        "title": "Estimate Disease Severity and Case Ascertainment",
+        "description": "Estimate the severity of a disease and ascertainment of\ncases, as discussed in Nishiura et al. (2009)\n<doi:10.1371/journal.pone.0006852>.",
+        "logo": "https://github.com/epiverse-trace/cfr/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/cfr/",
+        "source": "https://github.com/epiverse-trace/cfr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/cfr/delay_distributions.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_static_severity.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/cfr.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_from_individual_data.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_time_varying_severity.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/estimate_ascertainment.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/data_from_incidence2.html",
+            "https://epiverse-connect.r-universe.dev/articles/cfr/software-permissions.html"
+        ]
+    },
+    {
+        "package": "vaccineff",
+        "title": "Estimate Vaccine Effectiveness Based on Different Study Designs",
+        "description": "Provides tools for estimating vaccine effectiveness and\nrelated metrics. The 'vaccineff_data' class manages key\nfeatures for preparing, visualizing, and organizing cohort\ndata, as well as estimating vaccine effectiveness. The results\nand model performance are assessed using the 'vaccineff' class.",
+        "logo": "https://github.com/epiverse-trace/vaccineff/raw/HEAD/man/figures/logo.png",
+        "website": "https://epiverse-trace.github.io/vaccineff/",
+        "source": "https://github.com/epiverse-trace/vaccineff",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/vaccineff/cohort_design.html",
+            "https://epiverse-connect.r-universe.dev/articles/vaccineff/other_designs.html",
+            "https://epiverse-connect.r-universe.dev/articles/vaccineff/vaccineff.html"
+        ]
+    },
+    {
+        "package": "R0",
+        "title": "Estimation of R0 and Real-Time Reproduction Number from\nEpidemics",
+        "description": "Estimation of reproduction numbers for disease outbreak,\nbased on incidence data. The R0 package implements several\ndocumented methods. It is therefore possible to compare\nestimations according to the methods used. Depending on the\nmethods requested by user, basic reproduction number (commonly\ndenoted as R0) or real-time reproduction number (referred to as\nR(t)) is computed, along with a 95% Confidence Interval.\nPlotting outputs will give different graphs depending on the\nmethods requested : basic reproductive number estimations will\nonly show the epidemic curve (collected data) and an adjusted\nmodel, whereas real-time methods will also show the R(t)\nvariations throughout the outbreak time period. Sensitivity\nanalysis tools are also provided, and allow for investigating\neffects of varying Generation Time distribution or time window\non estimates.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/tobadia/R0",
+        "articles": []
+    },
+    {
+        "package": "epigrowthfit",
+        "title": "Nonlinear Mixed Effects Models of Epidemic Growth",
+        "description": "Maximum likelihood estimation of nonlinear mixed effects\nmodels of epidemic growth using Template Model Builder ('TMB').\nEnables joint estimation for collections of disease incidence\ntime series, including time series that describe multiple\nepidemic waves. Supports a set of widely used phenomenological\nmodels: exponential, logistic, Richards (generalized logistic),\nsubexponential, and Gompertz.  Provides methods for\ninterrogating model objects and several auxiliary functions,\nincluding one for computing basic reproduction numbers from\nfitted values of the initial exponential growth rate.\nPreliminary versions of this software were applied in Ma et al.\n(2014) <doi:10.1007/s11538-013-9918-2> and in Earn et al.\n(2020) <doi:10.1073/pnas.2004904117>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/davidearn/epigrowthfit",
+        "articles": []
+    },
+    {
+        "package": "COVID19",
+        "title": "COVID-19 Data Hub",
+        "description": "Unified datasets for a better understanding of COVID-19.",
+        "logo": "https://github.com/covid19datahub/COVID19/raw/HEAD/man/figures/logo.png",
+        "website": "https://covid19datahub.io",
+        "source": "https://github.com/covid19datahub/COVID19",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/COVID19/contributors.html",
+            "https://epiverse-connect.r-universe.dev/articles/COVID19/docs.html",
+            "https://epiverse-connect.r-universe.dev/articles/COVID19/data.html",
+            "https://epiverse-connect.r-universe.dev/articles/COVID19/python.html",
+            "https://epiverse-connect.r-universe.dev/articles/COVID19/r.html"
+        ]
+    },
+    {
+        "package": "mstate",
+        "title": "Data Preparation, Estimation and Prediction in Multi-State\nModels",
+        "description": "Contains functions for data preparation, descriptives,\nhazard estimation and prediction with Aalen-Johansen or\nsimulation in competing risks and multi-state models, see\nPutter, Fiocco, Geskus (2007) <doi:10.1002/sim.2712>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/hputter/mstate",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/mstate/Tutorial.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/mstate/visuals_demo.html"
+        ]
+    },
+    {
+        "package": "finalsize",
+        "title": "Calculate the Final Size of an Epidemic",
+        "description": "Calculate the final size of a\nsusceptible-infectious-recovered epidemic in a population with\ndemographic variation in contact patterns and susceptibility to\ndisease, as discussed in Miller (2012)\n<doi:10.1007/s11538-012-9749-6>.",
+        "logo": "https://github.com/epiverse-trace/finalsize/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/finalsize/",
+        "source": "https://github.com/epiverse-trace/finalsize",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/finalsize.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/compare_sir_model.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/susceptibility_matrices.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/varying_contacts.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/varying_susceptibility.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/uncertainty_params.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/demographic_turnover.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/r_eff_reckoner.html",
+            "https://epiverse-connect.r-universe.dev/articles/finalsize/theoretical_background.html"
+        ]
+    },
+    {
+        "package": "denguedatahub",
+        "title": "A Tidy Format Datasets of Dengue by Country",
+        "description": "Provides a weekly, monthly, yearly summary of dengue cases\nby state/ province/ country.",
+        "logo": null,
+        "website": "https://denguedatahub.netlify.app/",
+        "source": "https://github.com/thiyangt/denguedatahub",
+        "articles": []
+    },
+    {
+        "package": "adegenet",
+        "title": "Exploratory Analysis of Genetic and Genomic Data",
+        "description": "Toolset for the exploration of genetic and genomic data.\nAdegenet provides formal (S4) classes for storing and handling\nvarious genetic data, including genetic markers with varying\nploidy and hierarchical population structure ('genind' class),\nalleles counts by populations ('genpop'), and genome-wide SNP\ndata ('genlight'). It also implements original multivariate\nmethods (DAPC, sPCA), graphics, statistical tests, simulation\ntools, distance and similarity measures, and several spatial\nmethods. A range of both empirical and simulated datasets is\nalso provided to illustrate various methods.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/thibautjombart/adegenet",
+        "articles": []
+    },
+    {
+        "package": "epikit",
+        "title": "Miscellaneous Helper Tools for Epidemiologists",
+        "description": "Contains tools for formatting inline code, renaming\nredundant columns, aggregating age categories, adding survey\nweights, finding the earliest date of an event, plotting\nz-curves, generating population counts and calculating\nproportions with confidence intervals. This is part of the\n'R4Epis' project <https://r4epis.netlify.app/>.",
+        "logo": null,
+        "website": "https://r4epis.netlify.app",
+        "source": "https://github.com/R4EPI/epikit",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epikit/intro.html"
+        ]
+    },
+    {
+        "package": "epiparameterDB",
+        "title": "Database of Epidemiological Parameters",
+        "description": "A data package containing a database of epidemiological\nparameters. It stores the data for the 'epiparameter' R\npackage. Epidemiological parameter estimates are extracted from\nthe literature.",
+        "logo": "https://github.com/epiverse-trace/epiparameterDB/raw/HEAD/man/figures/logo.svg",
+        "website": null,
+        "source": "https://github.com/epiverse-trace/epiparameterDB",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiparameterDB/database.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiparameterDB/design-principles.html"
+        ]
+    },
+    {
+        "package": "epiR",
+        "title": "Tools for the Analysis of Epidemiological Data",
+        "description": "Tools for the analysis of epidemiological and surveillance\ndata. Contains functions for directly and indirectly adjusting\nmeasures of disease frequency, quantifying measures of\nassociation on the basis of single or multiple strata of count\ndata presented in a contingency table, computation of\nconfidence intervals around incidence risk and incidence rate\nestimates and sample size calculations for cross-sectional,\ncase-control and cohort studies. Surveillance tools include\nfunctions to calculate an appropriate sample size for 1- and\n2-stage representative freedom surveys, functions to estimate\nsurveillance system sensitivity and functions to support\nscenario tree modelling analyses.",
+        "logo": "https://github.com/mstevenson888/epiR/raw/HEAD/man/figures/logo.png",
+        "website": null,
+        "source": "https://github.com/mstevenson888/epiR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_descriptive.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_surveillance.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_measures_of_association.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiR/epiR_sample_size.html"
+        ]
+    },
+    {
+        "package": "superspreading",
+        "title": "Understand Individual-Level Variation in Infectious Disease\nTransmission",
+        "description": "Estimate and understand individual-level variation in\ntransmission. Implements density and cumulative compound\nPoisson discrete distribution functions ('Kremer et al.' (2021)\n<doi:10.1038/s41598-021-93578-x>), as well as functions to\ncalculate infectious disease outbreak statistics given\nepidemiological parameters on individual-level transmission;\nincluding the probability of an outbreak becoming an\nepidemic/extinct ('Kucharski et al.' (2020)\n<doi:10.1016/S1473-3099(20)30144-4>), or the cluster size\nstatistics, e.g. what proportion of cases cause X\\% of\ntransmission ('Lloyd-Smith et al.' (2005)\n<doi:10.1038/nature04153>).",
+        "logo": "https://github.com/epiverse-trace/superspreading/raw/HEAD/man/figures/logo.svg",
+        "website": "https://epiverse-trace.github.io/superspreading/",
+        "source": "https://github.com/epiverse-trace/superspreading",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/design-principles.html",
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/epidemic_risk.html",
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/estimate_individual_level_transmission.html",
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/superspreading.html",
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/proportion_transmission.html",
+            "https://epiverse-connect.r-universe.dev/articles/superspreading/heterogeneous_network_outbreaks.html"
+        ]
+    },
+    {
+        "package": "epiparameter",
+        "title": "Classes and Helper Functions for Working with Epidemiological\nParameters",
+        "description": "Classes and helper functions for loading, extracting,\nconverting, manipulating, plotting and aggregating\nepidemiological parameters for infectious diseases.\nEpidemiological parameters extracted from the literature are\nloaded from the 'epiparameterDB' R package.",
+        "logo": "https://github.com/epiverse-trace/epiparameter/raw/HEAD/man/figures/logo.png",
+        "website": "https://epiverse-trace.github.io/epiparameter/",
+        "source": "https://github.com/epiverse-trace/epiparameter",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiparameter/database.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiparameter/data_protocol.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiparameter/design_principles.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiparameter/epiparameter.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiparameter/extract_convert.html"
+        ]
+    },
+    {
+        "package": "epifitter",
+        "title": "Analysis and Simulation of Plant Disease Progress Curves",
+        "description": "Analysis and visualization of plant disease progress curve\ndata. Functions for fitting two-parameter population dynamics\nmodels (exponential, monomolecular, logistic and Gompertz) to\nproportion data for single or multiple epidemics using either\nlinear or no-linear regression.  Statistical and visual outputs\nare provided to aid in model selection. Synthetic curves can be\nsimulated for any of the models given the parameters. See\nLaurence V. Madden, Gareth Hughes, and Frank van den Bosch\n(2007) <doi:10.1094/9780890545058> for further information on\nthe methods.",
+        "logo": "https://github.com/AlvesKS/epifitter/raw/HEAD/man/figures/logo.png",
+        "website": null,
+        "source": "https://github.com/AlvesKS/epifitter",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epifitter/fitting.html",
+            "https://epiverse-connect.r-universe.dev/articles/epifitter/simulation.html"
+        ]
+    },
+    {
+        "package": "hmsidwR",
+        "title": "Health Metrics and the Spread of Infectious Diseases",
+        "description": "A collection of datasets and supporting functions\naccompanying Health Metrics and the Spread of Infectious\nDiseases by Federica Gazzelloni (2024). This package provides\ndata for health metrics calculations, including\nDisability-Adjusted Life Years (DALYs), Years of Life Lost\n(YLLs), and Years Lived with Disability (YLDs), as well as\nadditional tools for analyzing and visualizing health data.\nFederica Gazzelloni (2024) <doi:10.5281/zenodo.10818338>.",
+        "logo": "https://github.com/Fgazzelloni/hmsidwR/raw/HEAD/man/figures/logo.png",
+        "website": "https://fgazzelloni.github.io/hmsidwR/",
+        "source": "https://github.com/Fgazzelloni/hmsidwR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/hmsidwR/hmsidwR.html"
+        ]
+    },
+    {
+        "package": "nosoi",
+        "title": "A Forward Agent-Based Transmission Chain Simulator",
+        "description": "The aim of 'nosoi' (pronounced no.si) is to provide a\nflexible agent-based stochastic transmission chain/epidemic\nsimulator (Lequime et al. Methods in Ecology and Evolution\n11:1002-1007). It is named after the daimones of plague,\nsickness and disease that escaped Pandora's jar in the Greek\nmythology. 'nosoi' is able to take into account the influence\nof multiple variable on the transmission process (e.g.\ndual-host systems (such as arboviruses), within-host viral\ndynamics, transportation, population structure), alone or taken\ntogether, to create complex but relatively intuitive\nepidemiological simulations.",
+        "logo": "https://github.com/slequime/nosoi/raw/HEAD/man/figures/logo.png",
+        "website": "https://slequime.github.io/nosoi/",
+        "source": "https://github.com/slequime/nosoi",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/nosoi/nosoi.html",
+            "https://epiverse-connect.r-universe.dev/articles/nosoi/output.html",
+            "https://epiverse-connect.r-universe.dev/articles/nosoi/continuous.html",
+            "https://epiverse-connect.r-universe.dev/articles/nosoi/discrete.html",
+            "https://epiverse-connect.r-universe.dev/articles/nosoi/none.html"
+        ]
+    },
+    {
+        "package": "Epi",
+        "title": "Statistical Analysis in Epidemiology",
+        "description": "Functions for demographic and epidemiological analysis in\nthe Lexis diagram, i.e. register and cohort follow-up data. In\nparticular representation, manipulation, rate estimation and\nsimulation for multistate data - the Lexis suite of functions,\nwhich includes interfaces to 'mstate', 'etm' and 'cmprsk'\npackages. Contains functions for Age-Period-Cohort and\nLee-Carter modeling and a function for interval censored data\nand some useful functions for tabulation and plotting, as well\nas a number of epidemiological data sets.",
+        "logo": null,
+        "website": "http://bendixcarstensen.com/Epi/",
+        "source": "https://github.com/cran/Epi",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/Epi/crisk.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/Epi/aaflup.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/Epi/simLexis.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/Epi/addLexis.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/Epi/yll.pdf"
+        ]
+    },
+    {
+        "package": "phylepic",
+        "title": "Combined Visualisation of Phylogenetic and Epidemiological Data",
+        "description": "A collection of utilities and 'ggplot2' extensions to\nassist with visualisations in genomic epidemiology. This\nincludes the 'phylepic' chart, a visual combination of a\nphylogenetic tree and a matched epidemic curve. The included\n'ggplot2' extensions such as date axes binned by week are\nrelevant for other applications in epidemiology and beyond. The\napproach is described in Suster et al. (2024)\n<doi:10.1101/2024.04.02.24305229>.",
+        "logo": null,
+        "website": "https://cidm-ph.github.io/phylepic/",
+        "source": "https://github.com/cidm-ph/phylepic",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/phylepic/phylepic.html"
+        ]
+    },
+    {
+        "package": "nhanesA",
+        "title": "NHANES Data Retrieval",
+        "description": "Utility to retrieve data from the National Health and\nNutrition Examination Survey (NHANES) website\n<https://www.cdc.gov/nchs/nhanes/>.",
+        "logo": null,
+        "website": "https://cran.r-project.org/package=nhanesA",
+        "source": "https://github.com/cjendres1/nhanes",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/nhanesA/Introducing_nhanesA.html",
+            "https://epiverse-connect.r-universe.dev/articles/nhanesA/UsingSurveyWeights.html"
+        ]
+    },
+    {
+        "package": "diyar",
+        "title": "Record Linkage and Epidemiological Case Definitions in 'R'",
+        "description": "An R package for iterative and batched record linkage, and\napplying epidemiological case definitions. 'diyar' can be used\nfor deterministic and probabilistic record linkage, or\nmultistage record linkage combining both approaches. It\nfeatures the implementation of nested match criteria, and\nmechanisms to address missing data and conflicting matches\nduring stepwise record linkage. Case definitions are\nimplemented by assigning records to groups based on match\ncriteria such as person or place, and overlapping time or\nduration of events e.g. sample collection dates or periods of\nhospital stays. Matching records are assigned a unique group\nID. Index and duplicate records are removed or further analyses\nas required.",
+        "logo": null,
+        "website": "https://olisansonwu.github.io/diyar/index.html",
+        "source": "https://github.com/OlisaNsonwu/diyar",
+        "articles": []
+    },
+    {
+        "package": "cercospoRa",
+        "title": "Process Based Epidemiological Model for Cercospora Leaf Spot of\nSugar Beet",
+        "description": "Estimates sugar beet canopy closure with remotely sensed\nleaf area index and estimates when action might be needed to\nprotect the crop from a Leaf Spot epidemic with a negative\nprognosis model based on published models.",
+        "logo": "https://github.com/PaulMelloy/cercospoRa/raw/HEAD/man/figures/logo.png",
+        "website": "https://paul.melloy.com.au/cercospoRa/",
+        "source": "https://github.com/PaulMelloy/cercospoRa",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/cercospoRa/Getting-started.html"
+        ]
+    },
+    {
+        "package": "contactdata",
+        "title": "Social Contact Matrices for 177 Countries",
+        "description": "Data package for the supplementary data in Prem et al.\n(2017) <doi:10.1371/journal.pcbi.1005697> and Prem et al.\n<doi:10.1371/journal.pcbi.1009098>. Provides easy access to\ncontact data for 177 countries, for use in epidemiological,\ndemographic or social sciences research.",
+        "logo": "https://github.com/bisaloo/contactdata/raw/HEAD/man/figures/logo.svg",
+        "website": "https://hugogruson.fr/contactdata/",
+        "source": "https://github.com/bisaloo/contactdata",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/contactdata/countries.html",
+            "https://epiverse-connect.r-universe.dev/articles/contactdata/visualise_age.html",
+            "https://epiverse-connect.r-universe.dev/articles/contactdata/visualise_contact.html"
+        ]
+    },
+    {
+        "package": "incidence2",
+        "title": "Compute, Handle and Plot Incidence of Dated Events",
+        "description": "Provides functions and classes to compute, handle and\nvisualise incidence from dated events for a defined time\ninterval. Dates can be provided in various standard formats.\nThe class 'incidence2' is used to store computed incidence and\ncan be easily manipulated, subsetted, and plotted. This package\nis part of the RECON (<https://www.repidemicsconsortium.org/>)\ntoolkit for outbreak analysis (<https://www.reconverse.org>).",
+        "logo": null,
+        "website": "https://www.reconverse.org/incidence2/",
+        "source": "https://github.com/reconverse/incidence2",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/incidence2/incidence2.html"
+        ]
+    },
+    {
+        "package": "EpiDynamics",
+        "title": null,
+        "description": null,
+        "logo": null,
+        "website": null,
+        "source": null,
+        "articles": []
+    },
+    {
+        "package": "delphidocs",
+        "title": "pkgdown template for Delphi",
+        "description": "A pkgdown template for the Delphi R packages.",
+        "logo": null,
+        "website": "https://cmu-delphi.github.io/delphidocs",
+        "source": "https://github.com/cmu-delphi/delphidocs",
+        "articles": []
+    },
+    {
+        "package": "surveillance",
+        "title": "Temporal and Spatio-Temporal Modeling and Monitoring of Epidemic\nPhenomena",
+        "description": "Statistical methods for the modeling and monitoring of\ntime series of counts, proportions and categorical data, as\nwell as for the modeling of continuous-time point processes of\nepidemic phenomena. The monitoring methods focus on aberration\ndetection in count data time series from public health\nsurveillance of communicable diseases, but applications could\njust as well originate from environmetrics, reliability\nengineering, econometrics, or social sciences. The package\nimplements many typical outbreak detection procedures such as\nthe (improved) Farrington algorithm, or the negative binomial\nGLR-CUSUM method of Hoehle and Paul (2008)\n<doi:10.1016/j.csda.2008.02.015>. A novel CUSUM approach\ncombining logistic and multinomial logistic modeling is also\nincluded. The package contains several real-world data sets,\nthe ability to simulate outbreak data, and to visualize the\nresults of the monitoring in a temporal, spatial or\nspatio-temporal fashion. A recent overview of the available\nmonitoring procedures is given by Salmon et al. (2016)\n<doi:10.18637/jss.v070.i10>. For the retrospective analysis of\nepidemic spread, the package provides three endemic-epidemic\nmodeling frameworks with tools for visualization, likelihood\ninference, and simulation. hhh4() estimates models for\n(multivariate) count time series following Paul and Held (2011)\n<doi:10.1002/sim.4177> and Meyer and Held (2014)\n<doi:10.1214/14-AOAS743>. twinSIR() models the\nsusceptible-infectious-recovered (SIR) event history of a fixed\npopulation, e.g, epidemics across farms or networks, as a\nmultivariate point process as proposed by Hoehle (2009)\n<doi:10.1002/bimj.200900050>. twinstim() estimates\nself-exciting point process models for a spatio-temporal point\npattern of infective events, e.g., time-stamped geo-referenced\nsurveillance data, as proposed by Meyer et al. (2012)\n<doi:10.1111/j.1541-0420.2011.01684.x>. A recent overview of\nthe implemented space-time modeling frameworks for epidemic\nphenomena is given by Meyer et al. (2017)\n<doi:10.18637/jss.v077.i11>.",
+        "logo": null,
+        "website": "https://surveillance.R-Forge.R-project.org/",
+        "source": "https://github.com/cran/surveillance",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/glrnb.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/surveillance.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/hhh4_spacetime.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/hhh4.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/monitoringCounts.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/twinSIR.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/surveillance/twinstim.pdf"
+        ]
+    },
+    {
+        "package": "EpiContactTrace",
+        "title": "Epidemiological Tool for Contact Tracing",
+        "description": "Routines for epidemiological contact tracing and\nvisualisation of network of contacts.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/stewid/EpiContactTrace",
+        "articles": []
+    },
+    {
+        "package": "outbreaker2",
+        "title": "Bayesian Reconstruction of Disease Outbreaks by Combining\nEpidemiologic and Genomic Data",
+        "description": "Bayesian reconstruction of disease outbreaks using\nepidemiological and genetic information. Jombart T, Cori A,\nDidelot X, Cauchemez S, Fraser C and Ferguson N. 2014.\n<doi:10.1371/journal.pcbi.1003457>. Campbell, F, Cori A,\nFerguson N, Jombart T. 2019.\n<doi:10.1371/journal.pcbi.1006930>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/reconhub/outbreaker2",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/outbreaker2/introduction.html",
+            "https://epiverse-connect.r-universe.dev/articles/outbreaker2/overview.html",
+            "https://epiverse-connect.r-universe.dev/articles/outbreaker2/Rcpp_API.html",
+            "https://epiverse-connect.r-universe.dev/articles/outbreaker2/customisation.html"
+        ]
+    },
+    {
+        "package": "dde",
+        "title": "Solve Delay Differential Equations",
+        "description": "Solves ordinary and delay differential equations, where\nthe objective function is written in either R or C.  Suitable\nonly for non-stiff equations, the solver uses a\n'Dormand-Prince' method that allows interpolation of the\nsolution at any point.  This approach is as described by\nHairer, Norsett and Wanner (1993) <ISBN:3540604529>.  Support\nis also included for iterating difference equations.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/mrc-ide/dde",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/dde/dde.html"
+        ]
+    },
+    {
+        "package": "EpiEstim",
+        "title": "Estimate Time Varying Reproduction Numbers from Epidemic Curves",
+        "description": "Tools to quantify transmissibility throughout an epidemic\nfrom the analysis of time series of incidence as described in\nCori et al. (2013) <doi:10.1093/aje/kwt133> and Wallinga and\nTeunis (2004) <doi:10.1093/aje/kwh255>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/mrc-ide/EpiEstim",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/alternative_software.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/EpiEstim_backimputation.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/short_demo.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/EpiEstim_aggregated_data.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/full_EpiEstim_vignette.html",
+            "https://epiverse-connect.r-universe.dev/articles/EpiEstim/MV_EpiEstim_vignette.html"
+        ]
+    },
+    {
+        "package": "epidm",
+        "title": "UK Epidemiological Data Management",
+        "description": "Contains utilities and functions for the cleaning,\nprocessing and management of patient level public health data\nfor surveillance and analysis held by the UK Health Security\nAgency, UKHSA.",
+        "logo": null,
+        "website": "https://alexbhatt.github.io/epidm/",
+        "source": "https://github.com/alexbhatt/epidm",
+        "articles": []
+    },
+    {
+        "package": "incidence",
+        "title": "Compute, Handle, Plot and Model Incidence of Dated Events",
+        "description": "Provides functions and classes to compute, handle and\nvisualise incidence from dated events for a defined time\ninterval. Dates can be provided in various standard formats.\nThe class 'incidence' is used to store computed incidence and\ncan be easily manipulated, subsetted, and plotted. In addition,\nlog-linear models can be fitted to 'incidence' objects using\n'fit'. This package is part of the RECON\n(<https://www.repidemicsconsortium.org/>) toolkit for outbreak\nanalysis.",
+        "logo": null,
+        "website": "https://www.repidemicsconsortium.org/incidence/",
+        "source": "https://github.com/reconhub/incidence",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/incidence/conversions.html",
+            "https://epiverse-connect.r-universe.dev/articles/incidence/customize_plot.html",
+            "https://epiverse-connect.r-universe.dev/articles/incidence/incidence_class.html",
+            "https://epiverse-connect.r-universe.dev/articles/incidence/incidence_fit_class.html",
+            "https://epiverse-connect.r-universe.dev/articles/incidence/overview.html"
+        ]
+    },
+    {
+        "package": "malariaAtlas",
+        "title": "An R Interface to Open-Access Malaria Data, Hosted by the\n'Malaria Atlas Project'",
+        "description": "A suite of tools to allow you to download all publicly\navailable parasite rate survey points, mosquito occurrence\npoints and raster surfaces from the 'Malaria Atlas Project'\n<https://malariaatlas.org/> servers as well as utility\nfunctions for plotting the downloaded data.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/malaria-atlas-project/malariaAtlas",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/malariaAtlas/overview.html"
+        ]
+    },
+    {
+        "package": "dbparser",
+        "title": "Drugs Databases Parser",
+        "description": "This tool is for parsing public drug databases such as\n'DrugBank' XML database <https://go.drugbank.com/>. The parsed\ndata are then returned in a proper 'R' object called\n'dvobject'.",
+        "logo": "https://github.com/ropensci/dbparser/raw/HEAD/man/figures/logo.png",
+        "website": "https://docs.ropensci.org/dbparser/",
+        "source": "https://github.com/ropensci/dbparser",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/dbparser/dbparser.html"
+        ]
+    },
+    {
+        "package": "rplanes",
+        "title": "Plausibility Analysis of Epidemiological Signals",
+        "description": "Provides functionality to prepare data and analyze\nplausibility of both forecasted and reported epidemiological\nsignals. The functions implement a set of plausibility\nalgorithms that are agnostic to geographic and time resolutions\nand are calculated independently then presented as a combined\nscore.",
+        "logo": "https://github.com/signaturescience/rplanes/raw/HEAD/man/figures/logo.png",
+        "website": "https://signaturescience.github.io/rplanes/",
+        "source": "https://github.com/signaturescience/rplanes",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/rplanes/basic-usage.html",
+            "https://epiverse-connect.r-universe.dev/articles/rplanes/planes-components.html",
+            "https://epiverse-connect.r-universe.dev/articles/rplanes/interpretation.html",
+            "https://epiverse-connect.r-universe.dev/articles/rplanes/rplanes-explorer.html"
+        ]
+    },
+    {
+        "package": "odin",
+        "title": "ODE Generation and Integration",
+        "description": "Generate systems of ordinary differential equations (ODE)\nand integrate them, using a domain specific language (DSL).\nThe DSL uses R's syntax, but compiles to C in order to\nefficiently solve the system.  A solver is not provided, but\ninstead interfaces to the packages 'deSolve' and 'dde' are\ngenerated.  With these, while solving the differential\nequations, no allocations are done and the calculations remain\nentirely in compiled code.  Alternatively, a model can be\ntranspiled to R for use in contexts where a C compiler is not\npresent.  After compilation, models can be inspected to return\ninformation about parameters and outputs, or intermediate\nvalues after calculations. 'odin' is not targeted at any\nparticular domain and is suitable for any system that can be\nexpressed primarily as mathematical expressions.  Additional\nsupport is provided for working with delays (delay differential\nequations, DDE), using interpolated functions during\ninterpolation, and for integrating quantities that represent\narrays.",
+        "logo": "https://github.com/mrc-ide/odin/raw/HEAD/man/figures/logo.png",
+        "website": null,
+        "source": "https://github.com/mrc-ide/odin",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/odin/debugging.html",
+            "https://epiverse-connect.r-universe.dev/articles/odin/guide.html",
+            "https://epiverse-connect.r-universe.dev/articles/odin/odin.html",
+            "https://epiverse-connect.r-universe.dev/articles/odin/discrete.html",
+            "https://epiverse-connect.r-universe.dev/articles/odin/functions.html"
+        ]
+    },
+    {
+        "package": "o2geosocial",
+        "title": "Reconstruction of Transmission Chains from Surveillance Data",
+        "description": "Bayesian reconstruction of who infected whom during past\noutbreaks using routinely-collected surveillance data.\nInference of transmission trees using genotype, age specific\nsocial contacts, distance between cases and onset dates of the\nreported cases. (Robert A, Kucharski AJ, Gastanaduy PA, Paul P,\nFunk S. (2020) <doi:10.1098/rsif.2020.0084>).",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/alxsrobert/o2geosocial",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/o2geosocial/o2geosocial.html"
+        ]
+    },
+    {
+        "package": "shinySIR",
+        "title": "Interactive Plotting for Mathematical Models of Infectious\nDisease Spread",
+        "description": "Provides interactive plotting for mathematical models of\ninfectious disease spread. Users can choose from a variety of\ncommon built-in ordinary differential equation (ODE) models\n(such as the SIR, SIRS, and SIS models), or create their own.\nThis latter flexibility allows 'shinySIR' to be applied to\nsimple ODEs from any discipline. The package is a useful\nteaching tool as students can visualize how changing different\nparameters can impact model dynamics, with minimal knowledge of\ncoding in R. The built-in models are inspired by those featured\nin Keeling and Rohani (2008) <doi:10.2307/j.ctvcm4gk0> and\nBjornstad (2018) <doi:10.1007/978-3-319-97487-3>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/SineadMorris/shinySIR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/shinySIR/Vignette.html"
+        ]
+    },
+    {
+        "package": "cmprsk",
+        "title": "Subdistribution Analysis of Competing Risks",
+        "description": "Estimation, testing and regression modeling of\nsubdistribution functions in competing risks, as described in\nGray (1988), A class of K-sample tests for comparing the\ncumulative incidence of a competing risk, Ann. Stat.\n16:1141-1154 <DOI:10.1214/aos/1176350951>, and Fine JP and Gray\nRJ (1999), A proportional hazards model for the subdistribution\nof a competing risk, JASA, 94:496-509,\n<DOI:10.1080/01621459.1999.10474144>.",
+        "logo": null,
+        "website": "https://www.R-project.org",
+        "source": "https://github.com/cran/cmprsk",
+        "articles": []
+    },
+    {
+        "package": "linelistBayes",
+        "title": "Bayesian Analysis of Epidemic Data Using Line List and Case\nCount Approaches",
+        "description": "Provides tools for performing Bayesian inference on\nepidemiological data to estimate the time-varying reproductive\nnumber and other related metrics. These methods were published\nin Li and White (2021) <doi:10.1371/journal.pcbi.1009210>. This\npackage supports analyses based on aggregated case count data\nand individual line list data, facilitating enhanced\nsurveillance and intervention planning for infectious diseases\nlike COVID-19.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cmilando/linelistBayes",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/linelistBayes/Intro.html"
+        ]
+    },
+    {
+        "package": "covid19dbcand",
+        "title": "Selected 'Drugbank' Drugs for COVID-19 Treatment Related Data in\nR Format",
+        "description": "Provides different datasets parsed from 'Drugbank'\n<https://www.drugbank.ca/covid-19> database using 'dbparser'\npackage. It is a smaller version from 'dbdataset' package. It\ncontains only information about COVID-19 possible treatment.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/MohammedFCIS/covid19dbcand",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/covid19dbcand/covid19dbcand.html"
+        ]
+    },
+    {
+        "package": "tidyrates",
+        "title": "Tidy Epidemiological Rates",
+        "description": "Compute age-adjusted rates by direct and indirect methods\nand other epidemiological indicators in a tidy way, wrapping\nfunctions from the 'epitools' package.",
+        "logo": null,
+        "website": "https://rfsaldanha.github.io/tidyrates/",
+        "source": "https://github.com/rfsaldanha/tidyrates",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/tidyrates/quickstart.html"
+        ]
+    },
+    {
+        "package": "DSAIDE",
+        "title": "Dynamical Systems Approach to Infectious Disease Epidemiology\n(Ecology/Evolution)",
+        "description": "Exploration of simulation models (apps) of various\ninfectious disease transmission dynamics scenarios. The purpose\nof the package is to help individuals learn about infectious\ndisease epidemiology (ecology/evolution) from a dynamical\nsystems perspective. All apps include explanations of the\nunderlying models and instructions on what to do with the\nmodels.",
+        "logo": "https://github.com/ahgroup/DSAIDE/raw/HEAD/man/figures/logo.png",
+        "website": "https://ahgroup.github.io/DSAIDE/",
+        "source": "https://github.com/ahgroup/DSAIDE",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/DSAIDE/DSAIDE.html"
+        ]
+    },
+    {
+        "package": "EpiInvert",
+        "title": "Variational Techniques in Epidemiology",
+        "description": "Using variational techniques we address some\nepidemiological problems as the incidence curve decomposition\nby inverting the renewal equation as described in Alvarez et\nal. (2021) <doi:10.1073/pnas.2105112118> and Alvarez et al.\n(2022) <doi:10.3390/biology11040540> or the estimation of the\nfunctional relationship between epidemiological indicators. We\nalso propose a learning method for the short time forecast of\nthe trend incidence curve as described in Morel et al. (2022)\n<doi:10.1101/2022.11.05.22281904>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/lalvarezmat/EpiInvert",
+        "articles": []
+    },
+    {
+        "package": "epinet",
+        "title": "Epidemic/Network-Related Tools",
+        "description": "A collection of epidemic/network-related tools. Simulates\ntransmission of diseases through contact networks. Performs\nBayesian inference on network and epidemic parameters, given\nepidemic data.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/epinet",
+        "articles": []
+    },
+    {
+        "package": "EVI",
+        "title": "Epidemic Volatility Index as an Early-Warning Tool",
+        "description": "This is an R package implementing the epidemic volatility\nindex (EVI), as discussed by Kostoulas et. al. (2021) and\nvariations Pateras et al (2023). EVI is a new, conceptually\nsimple, early warning tool for oncoming epidemic waves. EVI is\nbased on the volatility of newly reported cases per unit of\ntime, ideally per day, and issues an early warning when the\nvolatility change rate exceeds a threshold.",
+        "logo": null,
+        "website": "https://www.nature.com/articles/s41598-021-02622-3",
+        "source": "https://github.com/ku-awdc/EVI",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EVI/EVI.html"
+        ]
+    },
+    {
+        "package": "deSolve",
+        "title": "Solvers for Initial Value Problems of Differential Equations\n('ODE', 'DAE', 'DDE')",
+        "description": "Functions that solve initial value problems of a system of\nfirst-order ordinary differential equations ('ODE'), of partial\ndifferential equations ('PDE'), of differential algebraic\nequations ('DAE'), and of delay differential equations.  The\nfunctions provide an interface to the FORTRAN functions\n'lsoda', 'lsodar', 'lsode', 'lsodes' of the 'ODEPACK'\ncollection, to the FORTRAN functions 'dvode', 'zvode' and\n'daspk' and a C-implementation of solvers of the 'Runge-Kutta'\nfamily with fixed or variable time steps.  The package contains\nroutines designed for solving 'ODEs' resulting from 1-D, 2-D\nand 3-D partial differential equations ('PDE') that have been\nconverted to 'ODEs' by numerical differencing.",
+        "logo": null,
+        "website": "http://desolve.r-forge.r-project.org/",
+        "source": "https://github.com/cran/deSolve",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/deSolve/deSolve.pdf",
+            "https://epiverse-connect.r-universe.dev/articles/deSolve/compiledCode.pdf"
+        ]
+    },
+    {
+        "package": "epiphy",
+        "title": "Analysis of Plant Disease Epidemics",
+        "description": "A toolbox to make it easy to analyze plant disease\nepidemics. It provides a common framework for plant disease\nintensity data recorded over time and/or space. Implemented\nstatistical methods are currently mainly focused on spatial\npattern analysis (e.g., aggregation indices, Taylor and binary\npower laws, distribution fitting, SADIE and 'mapcomp' methods).\nSee Laurence V. Madden, Gareth Hughes, Franck van den Bosch\n(2007) <doi:10.1094/9780890545058> for further information on\nthese methods. Several data sets that were mainly published in\nplant disease epidemiology literature are also included in this\npackage.",
+        "logo": "https://github.com/chgigot/epiphy/raw/HEAD/man/figures/logo.png",
+        "website": "https://chgigot.github.io/epiphy/",
+        "source": "https://github.com/chgigot/epiphy",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiphy/epiphy.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiphy/defs-and-eqns.html"
+        ]
+    },
+    {
+        "package": "epitweetr",
+        "title": "Early Detection of Public Health Threats from 'Twitter' Data",
+        "description": "It allows you to automatically monitor trends of tweets by\ntime, place and topic aiming at detecting public health threats\nearly through the detection of signals (e.g. an unusual\nincrease in the number of tweets). It was designed to focus on\ninfectious diseases, and it can be extended to all hazards or\nother fields of study by modifying the topics and keywords.\nMore information is available in the 'epitweetr' peer-review\npublication (doi:10.2807/1560-7917.ES.2022.27.39.2200177).",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/EU-ECDC/epitweetr",
+        "articles": []
+    },
+    {
+        "package": "EpiStats",
+        "title": "Tools for Epidemiologists",
+        "description": "Provides set of functions aimed at epidemiologists. The\npackage includes commands for measures of association and\nimpact for case control studies and cohort studies. It may be\nparticularly useful for outbreak investigations including\nunivariable analysis and stratified analysis. The functions for\ncohort studies include the CS(), CSTable() and CSInter()\ncommands. The functions for case control studies include the\nCC(), CCTable() and CCInter() commands. References - Cornfield,\nJ. 1956. A statistical problem arising from retrospective\nstudies. In Vol. 4 of Proceedings of the Third Berkeley\nSymposium, ed. J. Neyman, 135-148. Berkeley, CA - University of\nCalifornia Press. Woolf, B. 1955. On estimating the relation\nbetween blood group disease. Annals of Human Genetics 19\n251-253. Reprinted in Evolution of Epidemiologic Ideas\nAnnotated Readings on Concepts and Methods, ed. S. Greenland,\npp. 108-110. Newton Lower Falls, MA Epidemiology Resources.\nGilles Desve & Peter Makary, 2007. 'CSTABLE Stata module to\ncalculate summary table for cohort study' Statistical Software\nComponents S456879, Boston College Department of Economics.\nGilles Desve & Peter Makary, 2007. 'CCTABLE Stata module to\ncalculate summary table for case-control study' Statistical\nSoftware Components S456878, Boston College Department of\nEconomics.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/EpiStats",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiStats/EpiStats.html"
+        ]
+    },
+    {
+        "package": "epiCleanr",
+        "title": "A Tidy Solution for Epidemiological Data",
+        "description": "Offers a tidy solution for epidemiological data. It houses\na range of functions for epidemiologists and public health data\nwizards for data management and cleaning.",
+        "logo": "https://github.com/truenomad/epiCleanr/raw/HEAD/man/figures/logo.png",
+        "website": "https://truenomad.github.io/epiCleanr/",
+        "source": "https://github.com/truenomad/epiCleanr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiCleanr/using_epicleanr.html"
+        ]
+    },
+    {
+        "package": "covid19br",
+        "title": "Brazilian COVID-19 Pandemic Data",
+        "description": "Set of functions to import COVID-19 pandemic data into R.\nThe Brazilian COVID-19 data, obtained from the official\nBrazilian repository at <https://covid.saude.gov.br/>, is\navailable at country, region, state, and city-levels. The\npackage also downloads the world-level COVID-19 data from the\nJohn Hopkins University's repository.",
+        "logo": null,
+        "website": "https://fndemarqui.github.io/covid19br/",
+        "source": "https://github.com/fndemarqui/covid19br",
+        "articles": []
+    },
+    {
+        "package": "TransPhylo",
+        "title": "Inference of Transmission Tree from a Dated Phylogeny",
+        "description": "Inference of transmission tree from a dated phylogeny.\nIncludes methods to simulate and analyse outbreaks. The\nmethodology is described in Didelot et al. (2014)\n<doi:10.1093/molbev/msu121>, Didelot et al. (2017)\n<doi:10.1093/molbev/msw275>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/xavierdidelot/TransPhylo",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/TransPhylo/infer.html",
+            "https://epiverse-connect.r-universe.dev/articles/TransPhylo/TransPhylo.html",
+            "https://epiverse-connect.r-universe.dev/articles/TransPhylo/simulate.html",
+            "https://epiverse-connect.r-universe.dev/articles/TransPhylo/multitree.html"
+        ]
+    },
+    {
+        "package": "epiflows",
+        "title": "Predicting Disease Spread from Flow Data",
+        "description": "Provides functions and classes designed to handle and\nvisualise epidemiological flows between locations. Also\ncontains a statistical method for predicting disease spread\nfrom flow data initially described in Dorigatti et al. (2017)\n<doi:10.2807/1560-7917.ES.2017.22.28.30572>. This package is\npart of the RECON (<https://www.repidemicsconsortium.org/>)\ntoolkit for outbreak analysis.",
+        "logo": null,
+        "website": "https://www.repidemicsconsortium.org/epiflows/",
+        "source": "https://github.com/reconhub/epiflows",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epiflows/introduction.html",
+            "https://epiverse-connect.r-universe.dev/articles/epiflows/epiflows-class.html"
+        ]
+    },
+    {
+        "package": "modelSSE",
+        "title": "Modelling Infectious Disease Superspreading from Contact Tracing\nData",
+        "description": "Comprehensive analytical tools are provided to\ncharacterize infectious disease superspreading from contact\ntracing surveillance data. The underlying theoretical\nframeworks of this toolkit include branching process with\ntransmission heterogeneity (Lloyd-Smith et al. (2005)\n<doi:10.1038/nature04153>), case cluster size distribution\n(Nishiura et al. (2012) <doi:10.1016/j.jtbi.2011.10.039>,\nBlumberg et al. (2014) <doi:10.1371/journal.ppat.1004452>, and\nKucharski and Althaus (2015)\n<doi:10.2807/1560-7917.ES2015.20.25.21167>), and decomposition\nof reproduction number (Zhao et al. (2022)\n<doi:10.1371/journal.pcbi.1010281>).",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/modelSSE",
+        "articles": []
+    },
+    {
+        "package": "apisensr",
+        "title": "Interface to 'episensr' for Sensitivity Analysis of\nEpidemiological Results",
+        "description": "API for using 'episensr', Basic sensitivity analysis of\nthe observed relative risks adjusting for unmeasured\nconfounding and misclassification of the exposure/outcome, or\nboth. See <https://cran.r-project.org/package=episensr>.",
+        "logo": "https://github.com/dhaine/apisensr/raw/HEAD/man/figures/logo.png",
+        "website": null,
+        "source": "https://github.com/dhaine/apisensr",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/apisensr/apisensr.html"
+        ]
+    },
+    {
+        "package": "mem",
+        "title": "The Moving Epidemic Method",
+        "description": "The Moving Epidemic Method, created by T Vega and JE\nLozano (2012, 2015) <doi:10.1111/j.1750-2659.2012.00422.x>,\n<doi:10.1111/irv.12330>, allows the weekly assessment of the\nepidemic and intensity status to help in routine respiratory\ninfections surveillance in health systems. Allows the\ncomparison of different epidemic indicators, timing and shape\nwith past epidemics and across different regions or countries\nwith different surveillance systems. Also, it gives a measure\nof the performance of the method in terms of sensitivity and\nspecificity of the alert week.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/lozalojo/mem",
+        "articles": []
+    },
+    {
+        "package": "memapp",
+        "title": "The Moving Epidemic Method Web Application",
+        "description": "The Moving Epidemic Method, created by T Vega and JE\nLozano (2012, 2015) <doi:10.1111/j.1750-2659.2012.00422.x>,\n<doi:10.1111/irv.12330>, allows the weekly assessment of the\nepidemic and intensity status to help in routine respiratory\ninfections surveillance in health systems. Allows the\ncomparison of different epidemic indicators, timing and shape\nwith past epidemics and across different regions or countries\nwith different surveillance systems. Also, it gives a measure\nof the performance of the method in terms of sensitivity and\nspecificity of the alert week. 'memapp' is a web application\ncreated in the Shiny framework for the 'mem' R package.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/lozalojo/memapp",
+        "articles": []
+    },
+    {
+        "package": "argo",
+        "title": "Accurate Estimation of Influenza Epidemics using Google Search\nData",
+        "description": "Augmented Regression with General Online data (ARGO) for\naccurate estimation of influenza epidemics in United States on\nnational level, regional level and state level. It replicates\nthe method introduced in paper Yang, S., Santillana, M. and\nKou, S.C. (2015) <doi:10.1073/pnas.1515373112>; Ning, S., Yang,\nS. and Kou, S.C. (2019) <doi:10.1038/s41598-019-41559-6>; Yang,\nS., Ning, S. and Kou, S.C. (2021)\n<doi:10.1038/s41598-021-83084-5>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/argo",
+        "articles": []
+    },
+    {
+        "package": "trending",
+        "title": "Model Temporal Trends",
+        "description": "Provides a coherent interface to multiple modelling tools\nfor fitting trends along with a standardised approach for\ngenerating confidence and prediction intervals.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/reconverse/trending",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/trending/Introduction.html",
+            "https://epiverse-connect.r-universe.dev/articles/trending/prediction_intervals.html"
+        ]
+    },
+    {
+        "package": "covid19sf",
+        "title": "The Covid19 San Francisco Dataset",
+        "description": "Provides a verity of summary tables of the Covid19 cases\nin San Francisco. Data source: San Francisco, Department of\nPublic Health - Population Health Division\n<https://datasf.org/opendata/>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/RamiKrispin/covid19sf",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/covid19sf/data_refresh.html",
+            "https://epiverse-connect.r-universe.dev/articles/covid19sf/intro.html"
+        ]
+    },
+    {
+        "package": "covid19italy",
+        "title": "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Italy Dataset",
+        "description": "Provides a daily summary of the Coronavirus (COVID-19)\ncases in Italy by country, region and province level. Data\nsource: Presidenza del Consiglio dei Ministri - Dipartimento\ndella Protezione Civile <https://www.protezionecivile.it/>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/RamiKrispin/covid19italy",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/covid19italy/dashboard.html",
+            "https://epiverse-connect.r-universe.dev/articles/covid19italy/intro.html"
+        ]
+    },
+    {
+        "package": "epicasting",
+        "title": "Ewnet: An Ensemble Wavelet Neural Network for Forecasting and\nEpicasting",
+        "description": "Method and tool for generating time series forecasts using\nan ensemble wavelet-based auto-regressive neural network\narchitecture. This method provides additional support of\nexogenous variables and also generates confidence interval.\nThis package provides EWNet model for time series forecasting\nbased on the algorithm by Panja, et al. (2022) and Panja, et\nal. (2023) <arXiv:2206.10696>\n<doi:10.1016/j.chaos.2023.113124>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/epicasting",
+        "articles": []
+    },
+    {
+        "package": "coronavirus",
+        "title": "The 2019 Novel Coronavirus COVID-19 (2019-nCoV) Dataset",
+        "description": "Provides a daily summary of the Coronavirus (COVID-19)\ncases by state/province. Data source: Johns Hopkins University\nCenter for Systems Science and Engineering (JHU CCSE)\nCoronavirus\n<https://systems.jhu.edu/research/public-health/ncov/>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/RamiKrispin/coronavirus",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/coronavirus/covid19R.html"
+        ]
+    },
+    {
+        "package": "SpatialEpi",
+        "title": "Methods and Data for Spatial Epidemiology",
+        "description": "Methods and data for cluster detection and disease\nmapping.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/rudeboybert/SpatialEpi",
+        "articles": []
+    },
+    {
+        "package": "epimdr2",
+        "title": "Functions and Data for \"Epidemics: Models and Data in R (2nd\nEdition)\"",
+        "description": "Functions, data sets and shiny apps for \"Epidemics: Models\nand Data in R (2nd edition)\" by Ottar N. Bjornstad (ISBN:\n978-3-031-12055-8)\n<https://link.springer.com/book/9783031120558>. The package\ncontains functions to study the S(E)IR model, spatial and\nage-structured SIR models; time-series SIR and chain-binomial\nstochastic models; catalytic disease models; coupled map\nlattice models of spatial transmission and network models for\nsocial spread of infection. The package is also an advanced\nquantitative companion to the Coursera Epidemics Massive Online\nOpen Course <https://www.coursera.org/learn/epidemics>.",
+        "logo": null,
+        "website": "<https://github.com/objornstad/epimdr2>",
+        "source": "https://github.com/objornstad/epimdr2",
+        "articles": []
+    },
+    {
+        "package": "riskCommunicator",
+        "title": "G-Computation to Estimate Interpretable Epidemiological Effects",
+        "description": "Estimates flexible epidemiological effect measures\nincluding both differences and ratios using the parametric\nG-formula developed as an alternative to inverse probability\nweighting.  It is useful for estimating the impact of\ninterventions in the presence of treatment-confounder-feedback.\nG-computation was originally described by Robbins (1986)\n<doi:10.1016/0270-0255(86)90088-6> and has been described in\ndetail by Ahern, Hubbard, and Galea (2009)\n<doi:10.1093/aje/kwp015>; Snowden, Rose, and Mortimer (2011)\n<doi:10.1093/aje/kwq472>; and Westreich et al. (2012)\n<doi:10.1002/sim.5316>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/jgrembi/riskCommunicator",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/riskCommunicator/Vignette_newbieRusers.html",
+            "https://epiverse-connect.r-universe.dev/articles/riskCommunicator/Vignette_manuscript.html"
+        ]
+    },
+    {
+        "package": "epitrix",
+        "title": "Small Helpers and Tricks for Epidemics Analysis",
+        "description": "A collection of small functions useful for epidemics\nanalysis and infectious disease modelling. This includes\ncomputation of basic reproduction numbers from growth rates,\ngeneration of hashed labels to anonymize data, and fitting\ndiscretized Gamma distributions.",
+        "logo": null,
+        "website": "http://www.repidemicsconsortium.org/epitrix/",
+        "source": "https://github.com/reconhub/epitrix",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epitrix/estimate_incubation.html",
+            "https://epiverse-connect.r-universe.dev/articles/epitrix/epitrix.html"
+        ]
+    },
+    {
+        "package": "outbreaks",
+        "title": "A Collection of Disease Outbreak Data",
+        "description": "Empirical or simulated disease outbreak data, provided\neither as RData or as text files.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/reconhub/outbreaks",
+        "articles": []
+    },
+    {
+        "package": "covid19.analytics",
+        "title": "Load and Analyze Live Data from the COVID-19 Pandemic",
+        "description": "Load and analyze updated time series worldwide data of\nreported cases for the Novel Coronavirus Disease (COVID-19)\nfrom different sources, including the Johns Hopkins University\nCenter for Systems Science and Engineering (JHU CSSE) data\nrepository <https://github.com/CSSEGISandData/COVID-19>, \"Our\nWorld in Data\" <https://github.com/owid/> among several others.\nThe datasets reporting the COVID-19 cases are available in two\nmain modalities, as a time series sequences and aggregated data\nfor the last day with greater spatial resolution. Several\nanalysis, visualization and modelling functions are available\nin the package that will allow the user to compute and\nvisualize total number of cases, total number of changes and\ngrowth rate globally or for an specific geographical location,\nwhile at the same time generating models using these trends;\ngenerate interactive visualizations and generate\nSusceptible-Infected-Recovered (SIR) model for the disease\nspread.",
+        "logo": null,
+        "website": "https://mponce0.github.io/covid19.analytics/",
+        "source": "https://github.com/mponce0/covid19.analytics",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/covid19.analytics/covid19.analytics.html"
+        ]
+    },
+    {
+        "package": "covid19us",
+        "title": "Cases of COVID-19 in the United States",
+        "description": "A wrapper around the 'COVID Tracking Project API'\n<https://covidtracking.com/api/> providing data on cases of\nCOVID-19 in the US.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/aedobbyn/covid19us",
+        "articles": []
+    },
+    {
+        "package": "epiDisplay",
+        "title": "Epidemiological Data Display Package",
+        "description": "Package for data exploration and result presentation. Full\n'epicalc' package with data management functions is available\nat '<https://medipe.psu.ac.th/epicalc/>'.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/epiDisplay",
+        "articles": []
+    },
+    {
+        "package": "EpiCurve",
+        "title": "Plot an Epidemic Curve",
+        "description": "Creates simple or stacked epidemic curves for hourly,\ndaily, weekly or monthly outcome data.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/IamKDO/EpiCurve",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiCurve/EpiCurve.html"
+        ]
+    },
+    {
+        "package": "genSEIR",
+        "title": "Predict Epidemic Curves with Generalized SEIR Modeling",
+        "description": "Performs generalized\nSusceptible-Exposed-Infected-Recovered (SEIR) modeling to\npredict epidemic curves. The method is described in Peng et al.\n(2020) <doi:10.1101/2020.02.16.20023465>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/selcukorkmaz/genSEIR",
+        "articles": []
+    },
+    {
+        "package": "inctools",
+        "title": "Incidence Estimation Tools",
+        "description": "Tools for estimating incidence from biomarker data in\ncross- sectional surveys, and for calibrating tests for recent\ninfection. Implements and extends the method of Kassanjee et\nal. (2012) <doi:10.1097/EDE.0b013e3182576c07>.",
+        "logo": null,
+        "website": "https://github.sacema.org/inctools/index.html",
+        "source": "https://github.com/SACEMA/inctools",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/inctools/EstimatingIncidence.html",
+            "https://epiverse-connect.r-universe.dev/articles/inctools/Introduction.html",
+            "https://epiverse-connect.r-universe.dev/articles/inctools/SurveyDesign.html",
+            "https://epiverse-connect.r-universe.dev/articles/inctools/TestCalibration.html"
+        ]
+    },
+    {
+        "package": "powerSurvEpi",
+        "title": "Power and Sample Size Calculation for Survival Analysis of\nEpidemiological Studies",
+        "description": "Functions to calculate power and sample size for testing\nmain effect or interaction effect in the survival analysis of\nepidemiological studies (non-randomized studies), taking into\naccount the correlation between the covariate of the interest\nand other covariates. Some calculations also take into account\nthe competing risks and stratified analysis. This package also\nincludes a set of functions to calculate power and sample size\nfor testing main effect in the survival analysis of randomized\nclinical trials and conditional logistic regression for nested\ncase-control study.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/powerSurvEpi",
+        "articles": []
+    },
+    {
+        "package": "EpiReport",
+        "title": "Epidemiological Report",
+        "description": "Drafting an epidemiological report in 'Microsoft Word'\nformat for a given disease, similar to the Annual\nEpidemiological Reports published by the European Centre for\nDisease Prevention and Control. Through standalone functions,\nit is specifically designed to generate each disease specific\noutput presented in these reports and includes: - Table with\nthe distribution of cases by Member State over the last five\nyears; - Seasonality plot with the distribution of cases at the\nEuropean Union / European Economic Area level, by month, over\nthe past five years; - Trend plot with the trend and number of\ncases at the European Union / European Economic Area level, by\nmonth, over the past five years; - Age and gender bar graph\nwith the distribution of cases at the European Union / European\nEconomic Area level. Two types of datasets can be used: - The\ndefault dataset of dengue 2015-2019 data; - Any dataset\nspecified as described in the vignette.",
+        "logo": null,
+        "website": "https://www.ecdc.europa.eu/en/annual-epidemiological-reports",
+        "source": "https://github.com/EU-ECDC/EpiReport",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiReport/EpiReport_Vignette.html"
+        ]
+    },
+    {
+        "package": "covid19swiss",
+        "title": "COVID-19 Cases in Switzerland and Principality of Liechtenstein",
+        "description": "Provides a daily summary of the Coronavirus (COVID-19)\ncases in Switzerland cantons and Principality of Liechtenstein.\nData source: Specialist Unit for Open Government Data Canton of\nZurich <https://www.zh.ch/de/politik-staat/opendata.html>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/Covid19R/covid19swiss",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/covid19swiss/intro_covid19swiss.html",
+            "https://epiverse-connect.r-universe.dev/articles/covid19swiss/update_the_data.html"
+        ]
+    },
+    {
+        "package": "earlyR",
+        "title": "Estimation of Transmissibility in the Early Stages of a Disease\nOutbreak",
+        "description": "Implements a simple, likelihood-based estimation of the\nreproduction number (R0) using a branching process with a\nPoisson likelihood. This model requires knowledge of the serial\ninterval distribution, and dates of symptom onsets.\nInfectiousness is determined by weighting R0 by the probability\nmass function of the serial interval on the corresponding day.\nIt is a simplified version of the model introduced by Cori et\nal. (2013) <doi:10.1093/aje/kwt133>.",
+        "logo": null,
+        "website": "https://www.repidemicsconsortium.org/earlyR/",
+        "source": "https://github.com/reconhub/earlyR",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/earlyR/earlyR.html"
+        ]
+    },
+    {
+        "package": "EpiILM",
+        "title": "Spatial and Network Based Individual Level Models for Epidemics",
+        "description": "Provides tools for simulating from discrete-time\nindividual level models for infectious disease data analysis.\nThis epidemic model class contains spatial and contact-network\nbased models with two disease types: Susceptible-Infectious\n(SI) and Susceptible-Infectious-Removed (SIR).",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/waleedalmutiry/EpiILM",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiILM/Predict.pdf"
+        ]
+    },
+    {
+        "package": "corona",
+        "title": "Coronavirus ('Rona') Data Exploration",
+        "description": "Manipulate and view coronavirus data and other societally\nrelevant data at a basic level.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/corona",
+        "articles": []
+    },
+    {
+        "package": "CovidMutations",
+        "title": "Mutation Analysis and Assay Validation Toolkit for COVID-19\n(Coronavirus Disease 2019)",
+        "description": "A feasible framework for mutation analysis and reverse\ntranscription polymerase chain reaction (RT-PCR) assay\nevaluation of COVID-19, including mutation profile\nvisualization, statistics and mutation ratio of each assay. The\nmutation ratio is conducive to evaluating the coverage of\nRT-PCR assays in large-sized\nsamples<doi:10.20944/preprints202004.0529.v1>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/MSQ-123/CovidMutations",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/CovidMutations/vignette.html"
+        ]
+    },
+    {
+        "package": "RSurveillance",
+        "title": "Design and Analysis of Disease Surveillance Activities",
+        "description": "A range of functions for the design and analysis of\ndisease surveillance activities. These functions were\noriginally developed for animal health surveillance activities\nbut can be equally applied to aquatic animal, wildlife, plant\nand human health surveillance activities. Utilities are\nincluded for sample size calculation and analysis of\nrepresentative surveys for disease freedom, risk-based studies\nfor disease freedom and for prevalence estimation. This package\nis based on Cameron A., Conraths F., Frohlich A., Schauer B.,\nSchulz K., Sergeant E., Sonnenburg J., Staubach C. (2015). R\npackage of functions for risk-based surveillance. Deliverable\n6.24, WP 6 - Decision making tools for implementing risk-based\nsurveillance, Grant Number no. 310806, RISKSUR\n(<https://www.fp7-risksur.eu/sites/default/files/documents/Deliverables/RISKSUR_%28310806%29_D6.24.pdf>).\nMany of the 'RSurveillance' functions are incorporated into the\n'epitools' website: Sergeant, ESG, 2019. Epitools\nepidemiological calculators. Ausvet Pty Ltd. Available at:\n<http://epitools.ausvet.com.au>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/roStats/RSurveillance",
+        "articles": []
+    },
+    {
+        "package": "bets.covid19",
+        "title": "The BETS Model for Early Epidemic Data",
+        "description": "Implements likelihood inference for early epidemic\nanalysis. BETS is short for the four key epidemiological events\nbeing modeled: Begin of exposure, End of exposure, time of\nTransmission, and time of Symptom onset. The package contains a\ndataset of the trajectory of confirmed cases during the\ncoronavirus disease (COVID-19) early outbreak. More detail of\nthe statistical methods can be found in Zhao et al. (2020)\n<arXiv:2004.07743>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/qingyuanzhao/bets.covid19",
+        "articles": []
+    },
+    {
+        "package": "covid19france",
+        "title": "Cases of COVID-19 in France",
+        "description": "Imports and cleans 'opencovid19-fr'\n<https://github.com/opencovid19-fr/data> data on COVID-19 in\nFrance.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/Covid19R/covid19france",
+        "articles": []
+    },
+    {
+        "package": "epitools",
+        "title": "Epidemiology Tools",
+        "description": "Tools for training and practicing epidemiologists\nincluding methods for two-way and multi-way contingency tables.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/epitools",
+        "articles": []
+    },
+    {
+        "package": "EpiILMCT",
+        "title": "Continuous Time Distance-Based and Network-Based Individual\nLevel Models for Epidemics",
+        "description": "Provides tools for simulating from continuous-time\nindividual level models of disease transmission, and carrying\nout infectious disease data analyses with the same models. The\nepidemic models considered are distance-based and/or contact\nnetwork-based models within Susceptible-Infectious-Removed\n(SIR) or Susceptible-Infectious-Notified-Removed (SINR)\ncompartmental frameworks. An overview of the implemented\ncontinuous-time individual level models for epidemics is given\nby Almutiry and Deardon (2019) <doi:10.1515/ijb-2017-0092>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/waleedalmutiry/EpiILMCT",
+        "articles": []
+    },
+    {
+        "package": "tsiR",
+        "title": "An Implementation of the TSIR Model",
+        "description": "An implementation of the time-series\nSusceptible-Infected-Recovered (TSIR) model using a number of\ndifferent fitting options for infectious disease time series\ndata. The manuscript based on this package can be found here\n<https://doi:10.1371/0185528>. The method implemented here is\ndescribed by Finkenstadt and Grenfell (2000) <DOI:\n10.1111/1467-9876.00187>.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/adbecker/tsiR",
+        "articles": []
+    },
+    {
+        "package": "endtoend",
+        "title": "Transmissions and Receptions in an End to End Network",
+        "description": "Computes the expectation of the number of transmissions\nand receptions considering an End-to-End transport model with\nlimited number of retransmissions per packet. It provides\ntheoretical results and also estimated values based on Monte\nCarlo simulations. It is also possible to consider random data\nand ACK probabilities.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/endtoend",
+        "articles": []
+    },
+    {
+        "package": "colmozzie",
+        "title": "Dengue Cases and Climate Variables in Colombo Sri Lanka",
+        "description": "Weekly notified dengue cases and climate variables in\nColombo district Sri Lanka from 2008/ week-52 to 2014/ week-21.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/thiyangt/colmozzie",
+        "articles": []
+    },
+    {
+        "package": "epibasix",
+        "title": "Elementary Epidemiological Functions for Epidemiology and\nBiostatistics",
+        "description": "Contains elementary tools for analysis of common\nepidemiological problems, ranging from sample size estimation,\nthrough 2x2 contingency table analysis and basic measures of\nagreement (kappa, sensitivity/specificity). Appropriate print\nand summary statements are also written to facilitate\ninterpretation wherever possible.  Source code is commented\nthroughout to facilitate modification.  The target audience\nincludes advanced undergraduate and graduate students in\nepidemiology or biostatistics courses, and clinical\nresearchers.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/cran/epibasix",
+        "articles": []
+    },
+    {
+        "package": "EpiSignalDetection",
+        "title": "Signal Detection Analysis",
+        "description": "Exploring time series for signal detection. It is\nspecifically designed to detect possible outbreaks using\ninfectious disease surveillance data at the European Union /\nEuropean Economic Area or country level. Automatic detection\ntools used are presented in the paper \"Monitoring count time\nseries in R: aberration detection in public health\nsurveillance\", by Salmon et al. (2016)\n<doi:10.18637/jss.v070.i10>. The package includes: - Signal\nDetection tool, an interactive 'shiny' application in which the\nuser can import external data and perform basic signal\ndetection analyses; - An automated report in HTML format,\npresenting the results of the time series analysis in tables\nand graphs. This report can also be stratified by population\ncharacteristics (see 'Population' variable). This project was\nfunded by the European Centre for Disease Prevention and\nControl.",
+        "logo": null,
+        "website": "http://atlas.ecdc.europa.eu/public/index.aspx",
+        "source": "https://github.com/EU-ECDC/EpiSignalDetection",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/EpiSignalDetection/EpiSignalDetection_Vignette.html"
+        ]
+    },
+    {
+        "package": "epitab",
+        "title": "Flexible Contingency Tables for Epidemiology",
+        "description": "Builds contingency tables that cross-tabulate multiple\ncategorical variables and also calculates various summary\nmeasures. Export to a variety of formats is supported,\nincluding: 'HTML', 'LaTeX', and 'Excel'.",
+        "logo": null,
+        "website": null,
+        "source": "https://github.com/stulacy/epitab",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/epitab/user_guide.html"
+        ]
+    },
+    {
+        "package": "eesim",
+        "title": "Simulate and Evaluate Time Series for Environmental Epidemiology",
+        "description": "Provides functions to create simulated time series of\nenvironmental exposures (e.g., temperature, air pollution) and\nhealth outcomes for use in power analysis and simulation\nstudies in environmental epidemiology. This package also\nprovides functions to evaluate the results of simulation\nstudies based on these simulated time series. This work was\nsupported by a grant from the National Institute of\nEnvironmental Health Sciences (R00ES022631) and a fellowship\nfrom the Colorado State University Programs for Research and\nScholarly Excellence.",
+        "logo": null,
+        "website": "http://github.com/sakoehler7/eesim",
+        "source": "https://github.com/cran/eesim",
+        "articles": [
+            "https://epiverse-connect.r-universe.dev/articles/eesim/eesim.html"
+        ]
+    }
 ]
