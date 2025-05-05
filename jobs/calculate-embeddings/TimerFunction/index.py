@@ -31,7 +31,7 @@ DEVICE = torch.device("cpu")
 # --- Utility Functions ---
 def get_universe_docs(universe: str, destdir: str) -> None:
     try:
-        result = subprocess.run(
+        subprocess.run(
             ["Rscript", "-e", f"epiverse.scraper::get_universe_docs('{universe}', '{destdir}')"],
             check=True,
             capture_output=True,
@@ -70,7 +70,6 @@ def read_md_files_from_subfolders(folder_path: str) -> dict:
     for md_file in md_files:
         path_obj = Path(md_file)
         try:
-            subfolder = path_obj.parent.name
             folder_name = path_obj.parent.parent.name
             with open(path_obj, 'r', encoding='utf-8') as file:
                 content = file.read()
