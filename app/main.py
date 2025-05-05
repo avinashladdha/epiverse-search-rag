@@ -2,12 +2,12 @@ from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
 from models import SearchResponse
 from search_engine import SemanticSearchEngine
-
+import logging
 
 # --- Logging Configuration ---
 log_file_path = "query_and_response.log"  # Define the log file path
 # Create a rotating file handler
-log_handler = RotatingFileHandler(
+log_handler = logging.handlers.RotatingFileHandler(
     log_file_path, maxBytes=10 * 1024 * 1024, backupCount=5)  # 10MB max, 5 backups)
 # Create a formatter
 log_formatter = logging.Formatter(
