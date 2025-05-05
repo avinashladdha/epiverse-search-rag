@@ -1,6 +1,4 @@
-import os
 from pathlib import Path
-import shutil
 import pandas as pd
 import time
 from nltk import sent_tokenize
@@ -9,13 +7,9 @@ import torch
 import glob
 import yaml
 import subprocess
-from azure.identity import DefaultAzureCredential
-from azure.storage.blob import BlobServiceClient
 import azure.functions as func
 import logging.config
-from logging.handlers import RotatingFileHandler
 import tempfile
-import nltk
 
 with open('logging_config.yaml', 'r') as f:
     config = yaml.safe_load(f)

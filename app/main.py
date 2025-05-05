@@ -1,9 +1,7 @@
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import Response
+from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from models import UserQuery, SearchResponse
+from models import SearchResponse
 from search_engine import SemanticSearchEngine
-import json
 
 
 # --- Logging Configuration ---
@@ -51,7 +49,7 @@ search_engine = SemanticSearchEngine(
 
 @app.get("/api/", response_model=SearchResponse)
 def get_data(query: str = Query(..., description="User query string")):
-    logger.info("Input question:{query}") 
+    logger.info("Input question:{query}")
     results = search_engine.search(query)
     json_response = {
         "query": query,
@@ -60,7 +58,7 @@ def get_data(query: str = Query(..., description="User query string")):
             "results": results,
         }
     }
-    logger.info("Response:{json_response}") 
+    logger.info("Response:{json_response}")
     return json_response
 
 if __name__ == "__main__":
