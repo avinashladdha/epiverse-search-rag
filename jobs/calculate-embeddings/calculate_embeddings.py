@@ -7,7 +7,6 @@ import torch
 import glob
 import yaml
 import subprocess
-import azure.functions as func
 import logging.config
 import tempfile
 
@@ -20,8 +19,6 @@ logger = logging.getLogger(__name__)
 # --- Configuration ---
 tmpdir = tempfile.TemporaryDirectory(prefix = "sources_")
 SOURCE_FOLDER = tmpdir.name
-OUTPUT_EMBEDDINGS_PATH = 'corpus_embeddings.pth'
-OUTPUT_ANALYSIS_DF_PATH = 'analysis_df.csv'
 BI_ENCODER_MODEL = 'multi-qa-MiniLM-L6-cos-v1' # map queries and documents into a dense vector space such that relevant pairs have high cosine similarity. Works with Cross encoder in API file
 MAX_SEQ_LENGTH = 256
 WINDOW_SIZE = 7
@@ -39,9 +36,7 @@ def get_universe_docs(universe: str, destdir: str) -> None:
         )
         logging.info("R script ran successfully\n")
     except subprocess.CalledProcessError as e:
-        error = RuntimeError("Error running R script:\n" + e.stderr)
-        logging.error(error)
-        raise error
+        logging.error("Error running R script:\n" + e.stdout)
 
 def read_md_files_from_subfolders(folder_path: str) -> dict:
     """Reads .md files from subfolders, excluding those in 'vignettes/man'.
@@ -178,14 +173,13 @@ def create_passages(analysis_df: pd.DataFrame, window_size: int) -> list[str]:
 
 
 
-def encode_and_save_embeddings(passages: list[str], output_path: str,
-                              model_name: str, max_length: int,
-                              device: DEVICE) -> None:
-    """Encodes passages using a SentenceTransformer and saves the embeddings.
+def encode_embeddings(passages: list[str],
+                      model_name: str, max_length: int,
+                      device: DEVICE) -> None:
+    """Encodes passages using a SentenceTransformer and returns the embeddings.
 
     Args:
         passages: A list of text passages.
-        output_path: The path to save the embeddings.
         model_name: The name of the SentenceTransformer model.
         max_length: The maximum sequence length for the model.
         device: The torch device to use (e.g., 'cpu' or 'cuda').
@@ -194,13 +188,11 @@ def encode_and_save_embeddings(passages: list[str], output_path: str,
     bi_encoder.max_seq_length = max_length
     corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True,
                                           device=DEVICE)
-    torch.save(corpus_embeddings, output_path)
-
-    logger.info(f"Embeddings saved to '{output_path}' with shape: {corpus_embeddings.shape}.")
+    return corpus_embeddings
 
 
 # --- Main Execution ---
-def main(mytimer: func.TimerRequest) -> None:
+def fetch_docs_and_embed():
     start_time = time.time()
 
     logger.info("--- Fetching the documentation files ---")
@@ -216,14 +208,10 @@ def main(mytimer: func.TimerRequest) -> None:
 
     passages = create_passages(analysis_df, WINDOW_SIZE)
 
-    encode_and_save_embeddings(passages, OUTPUT_EMBEDDINGS_PATH,
-                              BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
-
-
-    analysis_df.to_csv(OUTPUT_ANALYSIS_DF_PATH, index=False)
-    logger.info(
-    f"Analysis DataFrame saved to '{OUTPUT_ANALYSIS_DF_PATH}' with {len(analysis_df)} rows and {len(analysis_df.columns)} columns.")
+    corpus_embeddings = encode_embeddings(passages, BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
 
     end_time = time.time()
     total_time = end_time - start_time
     logger.info(f"--- Finished processing in {total_time:.2f} seconds ---")
+
+    return analysis_df, corpus_embeddings
