@@ -32,7 +32,6 @@ class SemanticSearchEngine:
         self.cross_encoder = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
         self.analysis_df = pd.read_csv(analysis_df_path)
         package_descr_df = pd.read_json(package_descr_path, dtype=str)
-        package_descr_df = package_descr_df.map(lambda x: str(x)[2:-2])
         self.analysis_df = self.analysis_df.merge(package_descr_df, left_on='package_name', right_on='package', how='left')
         self.paragraphs = [str(s) for s in self.analysis_df['tokenized_content'].to_list()]
         self.window_size = 7
