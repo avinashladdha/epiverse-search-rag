@@ -1,7 +1,7 @@
 import logging
 import os
 import io  
-import tensor
+import torch
 from calculate_embeddings import fetch_docs_and_embed
 import azure.functions as func
 from azure.storage.blob import BlobServiceClient

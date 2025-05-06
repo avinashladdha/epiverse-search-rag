@@ -17,8 +17,8 @@ def main(mytimer: func.TimerRequest):
     logging.info(f"Using AzureWebJobsStorage: {connection_str}")
 
     blob_service_client = BlobServiceClient.from_connection_string(connection_str)
-    container_name = "metadata"
-    blob_name = "metadata.json"
+    container_name = "data"
+    blob_name = "epipkgs_metadata.json"
 
     # Ensure container exists
     container_client = blob_service_client.get_container_client(container_name)
