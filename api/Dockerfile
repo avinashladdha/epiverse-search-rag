@@ -1,8 +1,6 @@
 FROM python:3.11-slim
 
 
-COPY . .
-
 WORKDIR /api
 
 ENV USE_AZURE_STORAGE=true
