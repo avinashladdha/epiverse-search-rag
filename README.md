@@ -17,8 +17,10 @@ pre-process it for the semantic search engine.
 
 Both these jobs are:
 
-- Triggered on a weekly schedule
+- Triggered on a monthly schedule
 - Stateless: each run is independent from the previous ones, and from the other components of this codebase
+
+They can both be run locally by running the file with the `_locally.py` suffix, or via Azure Functions, with the files provided in the `_azure/` subfolder. When running on Azure Functions, it is directly integrated to Azure Blob Storage to save the output files there.
 
 ### "Calculate embeddings" component (stored in `jobs/calculate-embeddings`)
 
