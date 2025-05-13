@@ -1,6 +1,5 @@
 FROM mcr.microsoft.com/azure-functions/python:4-python3.12
 
-WORKDIR /jobs
 COPY requirements.txt .
 COPY logging_config.yaml .
 
@@ -28,11 +27,6 @@ RUN apt-get update && apt-get install gpg wget -y && \
 WORKDIR /home/site/wwwroot
 
 # Copy function app files
+COPY . /home/site/wwwroot/
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
-
-
-
-
-
-
