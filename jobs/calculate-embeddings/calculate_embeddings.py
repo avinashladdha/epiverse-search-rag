@@ -146,13 +146,25 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
 
     analysis_df_exploded = analysis_df.explode("tokenized_content")
     analysis_df_exploded['tokenized_content'] = analysis_df_exploded['tokenized_content'].apply(lambda x: str(x))
-    analysis_df_exploded['cluster_id'] = [i // window_size for i in range(len(analysis_df_exploded))]
+    # Generate cluster_id
+    cluster_ids = []
+    current_cluster = 0
+
+    for package_name, group in analysis_df_exploded.groupby("package_name", sort=False):
+        n = len(group)
+        # Assign a cluster_id every `window_size` rows in the group
+        for i in range(n):
+            cluster_ids.append(current_cluster + (i // window_size))
+        current_cluster = cluster_ids[-1] + 1  # Prepare for next package
+
+    analysis_df_exploded["cluster_id"] = cluster_ids
     analysis_df_exploded = analysis_df_exploded[['package_name', 'file_name', 'tokenized_content', 'cluster_id']]
 
     logger.info(
         f"Created analysis DataFrame with {len(analysis_df_exploded)} rows of tokenized content.")
 
     return analysis_df_exploded
+
 
 
 
