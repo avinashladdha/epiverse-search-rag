@@ -194,11 +194,11 @@ def encode_embeddings(passages: list[str],
 
 
 # --- Main Execution ---
-def fetch_docs_and_embed():
+def fetch_docs_and_embed(universe: str = "epiverse-connect"):
     start_time = time.time()
 
     logger.info("--- Fetching the documentation files ---")
-    get_universe_docs("epiverse-connect", SOURCE_FOLDER)
+    get_universe_docs(universe, SOURCE_FOLDER)
 
     logger.info("--- Starting the document processing pipeline ---")
     file_data = read_md_files_from_subfolders(SOURCE_FOLDER)
