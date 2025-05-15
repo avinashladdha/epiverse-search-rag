@@ -178,7 +178,7 @@ def create_passages(analysis_df: pd.DataFrame) -> list[str]:
         A list of strings, where each string is a passage.
     """
 
-    cluster_count = analysis_df['cluster_id'].max()
+    cluster_count = analysis_df['cluster_id'].nunique()
 
     passages = []
     for i in range(0, cluster_count):
