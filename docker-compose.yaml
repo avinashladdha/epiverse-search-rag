@@ -44,7 +44,8 @@ services:
         condition: service_started
       calculate-embeddings:
         condition: service_started
-    command: sleep 300 && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    # 5 min should be enough to ensure the previous steps had time to run and generate the necessary data
+    command: sh -c "sleep 300 && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
 
 volumes:
   azurite_data:
