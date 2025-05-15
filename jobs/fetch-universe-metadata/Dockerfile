@@ -17,6 +17,6 @@ RUN apt-get update && \
 WORKDIR /home/site/wwwroot
 
 # Copy function app files
-COPY . /home/site/wwwroot/
+COPY . .
 ENV AzureWebJobsScriptRoot=/home/site/wwwroot \
     AzureFunctionsJobHost__Logging__Console__IsEnabled=true
