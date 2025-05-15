@@ -168,21 +168,22 @@ def create_analysis_dataframe(doc_list: list[dict], window_size: int) -> pd.Data
 
 
 
-def create_passages(analysis_df: pd.DataFrame, window_size: int) -> list[str]:
+def create_passages(analysis_df: pd.DataFrame) -> list[str]:
     """Creates passages by joining tokenized content within a sliding window.
 
     Args:
         analysis_df: The analysis DataFrame.
-        window_size: The number of sentences to combine into a passage.
 
     Returns:
         A list of strings, where each string is a passage.
     """
-    paragraphs = analysis_df['tokenized_content'].tolist()
+
+    cluster_count = analysis_df['cluster_id'].max()
+
     passages = []
-    for i in range(0, len(paragraphs), window_size):
-        window = paragraphs[i:i + window_size]
-        passages.append("; ".join(window))
+    for i in range(0, cluster_count):
+        window = analysis_df[analysis_df['cluster_id']==i]['tokenized_content'].tolist()
+        passages.append('; '.join(window))
     return passages
 
 
@@ -220,7 +221,7 @@ def fetch_docs_and_embed(universe: str = "epiverse-connect"):
 
     analysis_df = create_analysis_dataframe(doc_list, WINDOW_SIZE)
 
-    passages = create_passages(analysis_df, WINDOW_SIZE)
+    passages = create_passages(analysis_df)
 
     corpus_embeddings = encode_embeddings(passages, BI_ENCODER_MODEL, MAX_SEQ_LENGTH, DEVICE)
 
