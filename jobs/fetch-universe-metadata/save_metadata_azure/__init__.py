@@ -28,9 +28,8 @@ def main(mytimer: func.TimerRequest):
         pass  # It's okay if it already exists
 
 
-    processed_metadata = fetch_universe_metadata("epiverse-trace")
+    processed_metadata = fetch_universe_metadata("epiverse-connect")
 
     # Upload blob
     blob_client = container_client.get_blob_client(blob_name)
     blob_client.upload_blob(json.dumps(processed_metadata).encode('utf-8'), overwrite=True)
-

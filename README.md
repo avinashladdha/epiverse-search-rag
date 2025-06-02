@@ -39,7 +39,7 @@ It has the following characteristics:
 
 - Runtime: python
 - Outputs:
-  - `metadata.json`: Tool metadata including names, authors, and source URLs (~150 KB)
+  - `epipkgs_metadata.json`: Tool metadata including names, authors, and source URLs (~150 KB)
 
 ## REST API in `app/` folder
 
@@ -49,7 +49,6 @@ This component exposes a FastAPI-based HTTP endpoint that accepts user search qu
 
 - Runtime: python
 - Inputs (dependencies):
-  - `metadata.json`: Tool metadata
+  - `epipkgs_metadata.json`: Tool metadata
   - `corpus_embeddings.pth`: Semantic vector space
   - `analysis_df.csv`: Token and document info
-

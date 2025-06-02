@@ -2,7 +2,7 @@ from fetch_universe_metadata import fetch_universe_metadata
 import json
 
 if __name__ == "__main__":
-    processed_metadata = fetch_universe_metadata("epiverse-trace")
+    processed_metadata = fetch_universe_metadata("epiverse-connect")
 
-    with open("metadata.json", "w", encoding="utf-8") as f:
+    with open("epipkgs_metadata.json", "w", encoding="utf-8") as f:
         json.dump(processed_metadata, f, indent = 4)
