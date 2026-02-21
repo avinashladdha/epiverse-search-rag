@@ -2,3 +2,11 @@
 __pycache__/
 *.pyc
 .vscode/
+.env
+
+# Generated data artefacts — do not commit
+*.pth
+*.zip
+data/*.csv
+data/*.json
+data.csv
