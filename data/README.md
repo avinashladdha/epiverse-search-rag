@@ -47,7 +47,7 @@ docker run -p 10000:10000 -p 10001:10001 -p 10002:10002 azurite-with-data
 - Use the Azure CLI or Azurite's API to verify that the files have been uploaded to the `data` container in Azurite Blob Storage.
 - Example Azure CLI command to list blobs:
   ```bash
-  az storage blob list --container-name data --connection-string "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;"
+  az storage blob list --container-name data --connection-string "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=<AZURITE_WELL_KNOWN_KEY>;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;"
   ```
 
 ## Notes
