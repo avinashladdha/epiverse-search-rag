@@ -6,12 +6,14 @@ class SearchResult(BaseModel):
     website: str | None = None
     source: str | None = None
     vignettes: list[str] | None = None
+    content: str | None = None
     relevance: float
 
 class SearchResponse(BaseModel):
     query: str
     filter: str
     response: dict[str, list[SearchResult]]
+    generated_answer: str | None = None
 
 class UserQuery(BaseModel):
     query_user: str = Field(..., description="The user's search query")

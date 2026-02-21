@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.models import SearchResponse
 from app.search_engine import SemanticSearchEngine
 from app.utils import load_data_from_blob
+from app.rag import generate_answer
+from app.config import MAX_CONTEXT_DOCS
 import json
 import logging
 import os
@@ -55,8 +57,8 @@ async def initialize_search_engine():
     try:
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         data_dir = os.path.join(base_dir, "data")
-        use_azure_storage = os.getenv("USE_AZURE_STORAGE", "false").lower() == "true"
-
+        use_azure_storage = False #os.getenv("USE_AZURE_STORAGE", "false").lower() == "true" # Changes made here
+        logger.info("data directory path : {}".format(data_dir))
         if use_azure_storage:
             logger.info("Loading data from Azure Blob Storage...")
             # TODO: pass the container name and blob name as environment variables
@@ -85,14 +87,21 @@ async def initialize_search_engine():
 @app.get("/api/", response_model=SearchResponse)
 def get_data(query: str = Query(..., description="User query string")):
 
-    logger.info("Input question:{query}") 
+    logger.info("Input question:{}".format(query)) 
+    logger.info(query)
     results = search_engine.search(query)
+    
+    # RAG Generation
+    context_docs = [res['content'] for res in results[:MAX_CONTEXT_DOCS] if res.get('content')]
+    generated_answer = generate_answer(query, context_docs)
+
     json_response = {
         "query": query,
         "filter": "epiverse",
         "response": {
             "results": results,
-        }
+        },
+        "generated_answer": generated_answer
     }
     logger.info(f"Response: {json.dumps(json_response, indent=2)}")
     return json_response
